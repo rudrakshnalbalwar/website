@@ -1,0 +1,65 @@
+.home {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+  color: white;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('/public/nss-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.register-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.vision, .reach, .social-links, .domains {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.stats-grid, .social-grid, .domains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.stat-item, .social-item, .domain-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .stats-grid, .social-grid, .domains-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 
