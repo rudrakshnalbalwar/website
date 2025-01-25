@@ -1,0 +1,101 @@
+/* Main container */
+.nss-container {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background-color: black;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Header section */
+  .nss-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+  }
+  
+  .nss-logo {
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .nss-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nss-menu-icon {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Content section */
+  .nss-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+  }
+  
+  .nss-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .nss-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  
+  /* NSS Details */
+  .nss-details {
+    margin-top: -20px;
+  }
+  
+  .nss-logo-large {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .nss-unit-title {
+    font-size: 2.5rem;
+    margin: 10px 0;
+  }
+  
+  .nss-slogan {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  /* Register button */
+  .nss-register-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nss-register-btn:hover {
+    background-color: #e64a19;
+  }  
