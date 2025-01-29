@@ -1,0 +1,351 @@
+/* Main container */
+.nss-container {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header section */
+.nss-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nss-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.nss-logo {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nss-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Menu icon for mobile screens */
+.nss-menu-icon {
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown Menu */
+.nss-dropdown {
+  position: absolute;
+  top: 50px; /* Adjust based on the header's height */
+  right: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Make sure it appears above other content */
+}
+
+.nss-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nss-dropdown ul li {
+  padding: 10px 15px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.nss-dropdown ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+}
+
+.nss-dropdown ul li a:hover {
+  background-color: #ff5722;
+  color: white;
+}
+
+/* Show dropdown when menu is open */
+.nss-dropdown.open {
+  display: block;
+}
+
+/* Main Content */
+.nss-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 0;
+}
+
+.nss-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nss-logo-large {
+  height: 100px;
+  margin-right: 20px;
+}
+
+.nss-text {
+  text-align: left;
+}
+
+.nss-unit-title {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  background: url('./Images/NSS_TITLE.png') center/cover no-repeat; /* Add background image */
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+}
+
+.nss-slogan {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 5px;
+  color: #f5f5f5;
+}
+
+/* Register button */
+.nss-register-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nss-register-btn:hover {
+  background-color: #e64a19;
+}
+
+/* OUR VISION Section */
+.nss-vision {
+  padding: 20px;
+  margin: 20px 10px;
+  background-color: #222;
+  border-radius: 10px;
+}
+
+.nss-vision-title {
+  font-size: 2rem;
+  color: #ffcc00;
+  text-align: center;
+}
+
+.nss-vision-text {
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Shared Styles for Our Reach & Domains */
+.nss-reach,
+.nss-domains {
+  padding: 20px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Section Titles */
+.nss-reach-title,
+.nss-domains-title {
+  font-size: 2rem;
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Reach Icons Layout */
+.nss-reach-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reach-item {
+  width: 120px;
+  margin: 10px;
+  text-align: center;
+}
+
+.reach-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+/* Domains Icons Layout */
+.nss-domains-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.domain-item {
+  width: 120px;
+  margin: 10px;
+  text-align: center;
+}
+
+.domain-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+/* Pop-up Hover Effect */
+.reach-item:hover .reach-icon,
+.domain-item:hover .domain-icon {
+  transform: scale(1.2); /* Slightly enlarge the icon */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Soft glow effect */
+}
+
+/* Responsive Design for Dropdown */
+@media (max-width: 768px) {
+  /* Adjust dropdown position on smaller screens */
+  .nss-dropdown {
+    top: 60px; /* Slightly adjust the position for mobile view */
+    right: 0; /* Make the dropdown align with the left side */
+    width: 100%; /* Make the dropdown take full width */
+    border-radius: 0;
+  }
+
+  .nss-dropdown ul {
+    width: 100%; /* Ensure menu items take full width */
+    text-align: center;
+  }
+
+  .nss-dropdown ul li {
+    padding: 15px 0; /* Increase padding for easier tapping */
+  }
+
+  .nss-dropdown ul li a {
+    font-size: 1.2rem; /* Larger text for better readability */
+  }
+
+  .nss-header {
+    flex-direction: row; /* Keep navbar in one line for tablets */
+  }
+
+  .nss-title {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+
+  .nss-logo {
+    height: 40px;
+  }
+
+  .nss-menu-icon {
+    display: block; /* Show the menu icon for smaller screens */
+  }
+
+  .nss-logo-large {
+    height: 80px;
+  }
+
+  .nss-unit-title {
+    font-size: 1.5rem;
+  }
+
+  .nss-slogan {
+    font-size: 1rem;
+  }
+
+  .nss-register-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .reach-item,
+  .domain-item {
+    width: 100px;
+  }
+
+  .reach-icon,
+  .domain-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens (mobile phones) */
+  .nss-dropdown {
+    top: 50px; /* Adjust the top position */
+    width: 100%; /* Full-width dropdown */
+  }
+
+  .nss-dropdown ul li {
+    padding: 12px 0; /* Adjust padding for compact space */
+  }
+
+  .nss-title {
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+
+  .nss-logo {
+    height: 35px;
+  }
+
+  .nss-logo-large {
+    height: 60px;
+  }
+
+  .nss-unit-title {
+    font-size: 1.2rem;
+  }
+
+  .nss-slogan {
+    font-size: 0.9rem;
+  }
+
+  .nss-register-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .reach-item,
+  .domain-item {
+    width: 80px;
+  }
+
+  .reach-icon,
+  .domain-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,123 @@
+/* Footer Container */
+.nss-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures all sections have equal height */
+    background: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    flex-wrap: nowrap; /* Keeps sections in a single row */
+}
+
+/* Equal-Sized Sections */
+.footer-section {
+    flex: 1; /* Ensures equal width */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content at the top */
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    min-height: 220px; /* Set consistent height */
+}
+
+/* Background Colors */
+.footer-section:first-child,
+.footer-section:last-child {
+    background: #1a1a1a;
+}
+
+.footer-section:nth-child(2) {
+    background: linear-gradient(to bottom, #d9d9d9, #bfbfbf);
+    color: black;
+}
+
+/* ✅ Fix for Misaligned Headings */
+.footer-section h3 {
+    border-bottom: 2px solid #ff00ff;
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    min-height: 30px; /* Ensures all headings have the same height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Quick Links */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Info */
+.footer-section p,
+.footer-section a {
+    font-size: 0.85rem;
+    margin: 3px 0;
+}
+
+/* ✅ Mobile Fix: Keep Sections in One Row */
+@media (max-width: 768px) {
+    .nss-footer {
+        display: flex;
+        flex-wrap: nowrap; /* Keep everything in one row */
+    }
+
+    .footer-section {
+        min-height: 180px; /* Maintain equal height */
+        padding: 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 0.9rem;
+        min-height: 30px; /* Ensures headings are always aligned */
+    }
+
+    .footer-section ul li {
+        font-size: 0.8rem;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.8rem;
+    }
+}
