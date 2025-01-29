@@ -1,5 +1,7 @@
 import React from "react";
+import {useState, useEffect} from "react";
 import "./NSSUnit.css";
+import NSSFooter from "./NSSFooter.js";
 import UniversityLogo from "./UniversityLogo.png";
 import NSSLogo from "./image.png";
 import Volunteers from "./Images/Volunteers.png";
@@ -8,8 +10,32 @@ import NEWS from "./Images/NEWS.png";
 import Followers from "./Images/Followers.png";
 import SE from "./Images/SE.png";
 import Insta from "./Images/Insta.png";
+import Education from "./Images/Education.png";
+import Health from "./Images/Health.png";
+import Innovation from "./Images/Innovation.png";
+import Society from "./Images/Society.png";
+import Environment from "./Images/Environment.png";
 
 const NSSUnit = () => {
+  const [menuOpen, setMenuOpen] = useState(false); // State for menu toggle
+
+  // Close the dropdown when clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const dropdown = document.querySelector(".nss-dropdown");
+      const menuIcon = document.querySelector(".nss-menu-icon");
+      if (dropdown && !dropdown.contains(event.target) && !menuIcon.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+  
+
   return (
     <div className="nss-container">
       {/* Navbar */}
@@ -18,7 +44,23 @@ const NSSUnit = () => {
           <img src={UniversityLogo} alt="University Logo" className="nss-logo" />
           <h1 className="nss-title">RAMDEOBABA UNIVERSITY</h1>
         </div>
-        <button className="nss-menu-icon">☰</button>
+        
+        {/* Menu Icon (☰) */}
+        <button className="nss-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </button>
+
+        {/* Dropdown Menu */}
+        {menuOpen && (
+          <nav className={`nss-dropdown ${menuOpen ? 'open' : ''}`}>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+          </nav>
+        )}
       </header>
 
       {/* Main Content */}
@@ -80,27 +122,34 @@ const NSSUnit = () => {
         <h2 className="nss-domains-title">DOMAINS</h2>
         <div className="nss-domains-icons">
           <div className="domain-item">
-            <img src="education.png" alt="Education" className="domain-icon" />
+            <img src={Education} alt="Education" className="domain-icon" />
             <p>EDUCATION</p>
           </div>
           <div className="domain-item">
-            <img src="health.png" alt="Health" className="domain-icon" />
+            <img src={Health} alt="Health" className="domain-icon" />
             <p>HEALTH</p>
           </div>
           <div className="domain-item">
-            <img src="innovation.png" alt="Innovation" className="domain-icon" />
+            <img src={Innovation} alt="Innovation" className="domain-icon" />
             <p>INNOVATION</p>
           </div>
           <div className="domain-item">
-            <img src="society.png" alt="Society" className="domain-icon" />
+            <img src={Society} alt="Society" className="domain-icon" />
             <p>SOCIETY</p>
           </div>
           <div className="domain-item">
-            <img src="environment.png" alt="Environment" className="domain-icon" />
+            <img src={Environment} alt="Environment" className="domain-icon" />
             <p>ENVIRONMENT</p>
           </div>
         </div>
       </div>
+
+      <div className="nss-container">
+      {/* Other website sections */}
+
+      {/* Footer Section */}
+      <NSSFooter />
+    </div>
     </div>
   );
 };

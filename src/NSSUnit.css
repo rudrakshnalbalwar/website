@@ -45,6 +45,48 @@
   cursor: pointer;
 }
 
+/* Dropdown Menu */
+.nss-dropdown {
+  position: absolute;
+  top: 50px; /* Adjust based on the header's height */
+  right: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Make sure it appears above other content */
+}
+
+.nss-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nss-dropdown ul li {
+  padding: 10px 15px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.nss-dropdown ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+}
+
+.nss-dropdown ul li a:hover {
+  background-color: #ff5722;
+  color: white;
+}
+
+/* Show dropdown when menu is open */
+.nss-dropdown.open {
+  display: block;
+}
+
 /* Main Content */
 .nss-content {
   display: flex;
@@ -190,9 +232,29 @@
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Soft glow effect */
 }
 
-
-/* Responsive Design */
+/* Responsive Design for Dropdown */
 @media (max-width: 768px) {
+  /* Adjust dropdown position on smaller screens */
+  .nss-dropdown {
+    top: 60px; /* Slightly adjust the position for mobile view */
+    right: 0; /* Make the dropdown align with the left side */
+    width: 100%; /* Make the dropdown take full width */
+    border-radius: 0;
+  }
+
+  .nss-dropdown ul {
+    width: 100%; /* Ensure menu items take full width */
+    text-align: center;
+  }
+
+  .nss-dropdown ul li {
+    padding: 15px 0; /* Increase padding for easier tapping */
+  }
+
+  .nss-dropdown ul li a {
+    font-size: 1.2rem; /* Larger text for better readability */
+  }
+
   .nss-header {
     flex-direction: row; /* Keep navbar in one line for tablets */
   }
@@ -240,8 +302,14 @@
 }
 
 @media (max-width: 480px) {
-  .nss-header {
-    flex-direction: row; /* Ensure navbar stays in a single row */
+  /* For very small screens (mobile phones) */
+  .nss-dropdown {
+    top: 50px; /* Adjust the top position */
+    width: 100%; /* Full-width dropdown */
+  }
+
+  .nss-dropdown ul li {
+    padding: 12px 0; /* Adjust padding for compact space */
   }
 
   .nss-title {
