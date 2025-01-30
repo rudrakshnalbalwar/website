@@ -48,14 +48,14 @@
 /* Dropdown Menu */
 .nss-dropdown {
   position: absolute;
-  top: 50px; /* Adjust based on the header's height */
+  top: 50px;
   right: 20px;
+  z-index: 1000;
   background-color: #333;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 150px;
-  display: none; /* Hidden by default */
-  z-index: 1000; /* Make sure it appears above other content */
+  display: none;
 }
 
 .nss-dropdown ul {
@@ -82,7 +82,6 @@
   color: white;
 }
 
-/* Show dropdown when menu is open */
 .nss-dropdown.open {
   display: block;
 }
@@ -108,16 +107,12 @@
   margin-right: 20px;
 }
 
-.nss-text {
-  text-align: left;
-}
-
 .nss-unit-title {
   font-size: 3rem;
   margin: 0;
   font-weight: bold;
-  background: url('./Images/NSS_TITLE.png') center/cover no-repeat; /* Add background image */
-  -webkit-background-clip: text; 
+  background: url('./Images/NSS_TITLE.png') center/cover no-repeat;
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
@@ -132,8 +127,8 @@
 /* Register button */
 .nss-register-btn {
   margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 12px 24px;
+  font-size: 1.2rem;
   background-color: #ff5722;
   color: white;
   border: none;
@@ -146,21 +141,22 @@
   background-color: #e64a19;
 }
 
-/* OUR VISION Section */
-.nss-vision {
+/* Sections Styling */
+.nss-vision, .nss-who-we-are, .nss-what-we-do {
   padding: 20px;
   margin: 20px 10px;
   background-color: #222;
+  background-image: url('./Images/NSS_TITLE.png');
   border-radius: 10px;
 }
 
-.nss-vision-title {
+.nss-vision-title, .nss-section-title {
   font-size: 2rem;
   color: #ffcc00;
   text-align: center;
 }
 
-.nss-vision-text {
+.nss-vision-text, .nss-section-text {
   font-size: 1rem;
   text-align: center;
   color: white;
@@ -179,84 +175,63 @@
 /* Section Titles */
 .nss-reach-title,
 .nss-domains-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ffcc00;
   text-align: center;
   margin-bottom: 15px;
 }
 
-/* Reach Icons Layout */
-.nss-reach-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.reach-item {
-  width: 120px;
-  margin: 10px;
-  text-align: center;
-}
-
-.reach-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 5px;
-}
-
-/* Domains Icons Layout */
+/* Icons Layout */
+.nss-reach-icons,
 .nss-domains-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
+  gap: 15px; /* Space between icons */
 }
 
+.reach-item,
 .domain-item {
-  width: 120px;
-  margin: 10px;
+  width: 100px;
   text-align: center;
+  font-size: 0.8rem;
 }
 
+.reach-icon,
 .domain-icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Pop-up Hover Effect */
 .reach-item:hover .reach-icon,
 .domain-item:hover .domain-icon {
-  transform: scale(1.2); /* Slightly enlarge the icon */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Soft glow effect */
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
-/* Responsive Design for Dropdown */
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  /* Adjust dropdown position on smaller screens */
   .nss-dropdown {
-    top: 60px; /* Slightly adjust the position for mobile view */
-    right: 0; /* Make the dropdown align with the left side */
-    width: 100%; /* Make the dropdown take full width */
+    top: 60px;
+    right: 0;
+    width: 100%;
     border-radius: 0;
   }
 
   .nss-dropdown ul {
-    width: 100%; /* Ensure menu items take full width */
+    width: 100%;
     text-align: center;
   }
 
   .nss-dropdown ul li {
-    padding: 15px 0; /* Increase padding for easier tapping */
+    padding: 15px 0;
   }
 
   .nss-dropdown ul li a {
-    font-size: 1.2rem; /* Larger text for better readability */
-  }
-
-  .nss-header {
-    flex-direction: row; /* Keep navbar in one line for tablets */
+    font-size: 1.2rem;
   }
 
   .nss-title {
@@ -269,7 +244,7 @@
   }
 
   .nss-menu-icon {
-    display: block; /* Show the menu icon for smaller screens */
+    display: block;
   }
 
   .nss-logo-large {
@@ -277,7 +252,7 @@
   }
 
   .nss-unit-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .nss-slogan {
@@ -285,31 +260,15 @@
   }
 
   .nss-register-btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  .reach-item,
-  .domain-item {
-    width: 100px;
-  }
-
-  .reach-icon,
-  .domain-icon {
-    width: 50px;
-    height: 50px;
+    font-size: 1.1rem;
+    padding: 10px 20px;
   }
 }
 
 @media (max-width: 480px) {
-  /* For very small screens (mobile phones) */
   .nss-dropdown {
-    top: 50px; /* Adjust the top position */
-    width: 100%; /* Full-width dropdown */
-  }
-
-  .nss-dropdown ul li {
-    padding: 12px 0; /* Adjust padding for compact space */
+    top: 50px;
+    width: 100%;
   }
 
   .nss-title {
@@ -326,7 +285,7 @@
   }
 
   .nss-unit-title {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
   }
 
   .nss-slogan {
@@ -334,18 +293,24 @@
   }
 
   .nss-register-btn {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+    font-size: 1.2rem;
+    padding: 12px 24px;
   }
 
-  .reach-item,
-  .domain-item {
-    width: 80px;
+  /* Icons Layout */
+  .nss-domains-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 on top row */
+    gap: 15px;
+    justify-content: center;  /* Centers them properly */
+
   }
 
-  .reach-icon,
-  .domain-icon {
-    width: 40px;
-    height: 40px;
-  }
+/* Make the last two items span two columns */
+.domain-item:nth-child(4),
+.domain-item:nth-child(5),
+.domain-items:nth-child(6) {
+  grid-column: span 1.5; /* Distributes bottom two icons evenly */
+  justify-self: center;  /* Centers them properly */
+}
 }
