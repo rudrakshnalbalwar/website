@@ -302,9 +302,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 on top row */
     gap: 15px;
+    justify-content: center;  /* Centers them properly */
+
   }
 
-  .domain-item:nth-child(n+4) {
-    grid-column: span 2; /* 2 on bottom row */
-  }
+/* Make the last two items span two columns */
+.domain-item:nth-child(4),
+.domain-item:nth-child(5),
+.domain-items:nth-child(6) {
+  grid-column: span 1.5; /* Distributes bottom two icons evenly */
+  justify-self: center;  /* Centers them properly */
+}
 }

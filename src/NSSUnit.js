@@ -14,6 +14,7 @@ import Health from "./Images/Health.png";
 import Innovation from "./Images/Innovation.png";
 import Society from "./Images/Society.png";
 import Environment from "./Images/Environment.png";
+import Rural from "./Images/Rural.png";
 
 const NSSUnit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -159,6 +160,10 @@ const NSSUnit = () => {
           <div className="domain-item">
             <img src={Environment} alt="Environment" className="domain-icon" />
             <p>ENVIRONMENT</p>
+          </div>
+          <div className="domain-item">
+            <img src={Rural} alt="Environment" className="domain-icon" />
+            <p>Rural</p>
           </div>
         </div>
       </div>
