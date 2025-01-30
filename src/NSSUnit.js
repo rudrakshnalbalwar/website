@@ -1,5 +1,4 @@
-import React from "react";
-import {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./NSSUnit.css";
 import NSSFooter from "./NSSFooter.js";
 import UniversityLogo from "./UniversityLogo.png";
@@ -17,9 +16,8 @@ import Society from "./Images/Society.png";
 import Environment from "./Images/Environment.png";
 
 const NSSUnit = () => {
-  const [menuOpen, setMenuOpen] = useState(false); // State for menu toggle
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Close the dropdown when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
       const dropdown = document.querySelector(".nss-dropdown");
@@ -34,7 +32,6 @@ const NSSUnit = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-  
 
   return (
     <div className="nss-container">
@@ -44,15 +41,15 @@ const NSSUnit = () => {
           <img src={UniversityLogo} alt="University Logo" className="nss-logo" />
           <h1 className="nss-title">RAMDEOBABA UNIVERSITY</h1>
         </div>
-        
-        {/* Menu Icon (☰) */}
+
+        {/* Menu Icon */}
         <button className="nss-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </button>
 
         {/* Dropdown Menu */}
         {menuOpen && (
-          <nav className={`nss-dropdown ${menuOpen ? 'open' : ''}`}>
+          <nav className={`nss-dropdown ${menuOpen ? "open" : ""}`}>
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">Events</a></li>
@@ -86,32 +83,54 @@ const NSSUnit = () => {
         </p>
       </div>
 
+      {/* Who We Are Section */}
+      <div className="nss-who-we-are">
+        <h2 className="nss-section-title">WHO WE ARE</h2>
+        <p className="nss-section-text">
+          We are a community of dedicated students and volunteers committed to 
+          making a meaningful impact on society. Through NSS, we work towards 
+          the upliftment of underprivileged communities, environmental conservation, 
+          and social awareness campaigns.
+        </p>
+      </div>
+
+      {/* What We Do Section */}
+      <div className="nss-what-we-do">
+        <h2 className="nss-section-title">WHAT WE DO</h2>
+        <p className="nss-section-text">
+          Our initiatives include organizing health and education camps, blood 
+          donation drives, environmental sustainability projects, and social 
+          welfare programs. By participating in NSS, students develop leadership, 
+          empathy, and a deep sense of responsibility toward society.
+        </p>
+      </div>
+
       {/* Our Reach Section */}
       <div className="nss-reach">
         <h2 className="nss-reach-title">OUR REACH</h2>
         <div className="nss-reach-icons">
           <div className="reach-item">
-            <img src= {Volunteers} alt="Volunteers" className="reach-icon" />
+            <img src={Volunteers} alt="Volunteers" className="reach-icon" />
             <p>VOLUNTEERS</p>
           </div>
           <div className="reach-item">
-            <img src= {HC} alt="Happy Children" className="reach-icon" />
-            <p>HAPPY CHILDRENS</p>
+            <img src={HC} alt="Happy Children" className="reach-icon" />
+            <p>HAPPY CHILDREN</p>
           </div>
           <div className="reach-item">
-            <img src= {NEWS} alt="News" className="reach-icon" />
+            <img src={NEWS} alt="News" className="reach-icon" />
             <p>NEWS</p>
           </div>
           <div className="reach-item">
-            <img src= {Followers} alt="Facebook Followers" className="reach-icon" />
+            <img src={Followers} alt="Facebook Followers" className="reach-icon" />
             <p>FACEBOOK FOLLOWERS</p>
           </div>
           <div className="reach-item">
-            <img src= {SE} alt="Student Engagement" className="reach-icon" />
+            <img src={SE} alt="Student Engagement" className="reach-icon" />
             <p>STUDENT ENGAGEMENT</p>
           </div>
           <div className="reach-item">
-            <img src= {Insta} alt="Instagram Followers" className="reach-icon" />
+            <img src={Insta} alt="Instagram Followers" className="reach-icon" />
             <p>INSTAGRAM FOLLOWERS</p>
           </div>
         </div>
@@ -144,12 +163,8 @@ const NSSUnit = () => {
         </div>
       </div>
 
-      <div className="nss-container">
-      {/* Other website sections */}
-
       {/* Footer Section */}
       <NSSFooter />
-    </div>
     </div>
   );
 };
