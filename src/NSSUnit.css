@@ -6,9 +6,6 @@
   background-color: black;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 /* Header section */
@@ -98,7 +95,6 @@
   justify-content: center;
   padding: 20px;
   margin-top: 0;
-  flex-grow: 1; /* Makes sure content takes up available space, leaving room for footer */
 }
 
 .nss-details {
@@ -136,8 +132,8 @@
 /* Register button */
 .nss-register-btn {
   margin-top: 10px;
-  padding: 12px 25px;
-  font-size: 1.2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
   background-color: #ff5722;
   color: white;
   border: none;
@@ -152,20 +148,21 @@
 
 /* OUR VISION Section */
 .nss-vision, .nss-who-we-are, .nss-what-we-do {
-  padding: 15px;
-  margin: 10px 5px;
+  padding: 20px;
+  margin: 20px 10px;
   background-color: #222;
+  background-image: url('./Images/NSS_TITLE.png');
   border-radius: 10px;
 }
 
 .nss-vision-title, .nss-section-title {
-  font-size: 1.6rem; /* Reduced font size for mobile */
+  font-size: 2rem;
   color: #ffcc00;
   text-align: center;
 }
 
 .nss-vision-text, .nss-section-text {
-  font-size: 0.9rem; /* Reduced font size for better fit */
+  font-size: 1rem;
   text-align: center;
   color: white;
   margin-top: 10px;
@@ -174,8 +171,8 @@
 /* Shared Styles for Our Reach & Domains */
 .nss-reach,
 .nss-domains {
-  padding: 15px;
-  margin: 15px 5px;
+  padding: 20px;
+  margin: 20px 10px;
   border-radius: 10px;
   text-align: center;
 }
@@ -183,7 +180,7 @@
 /* Section Titles */
 .nss-reach-title,
 .nss-domains-title {
-  font-size: 1.8rem; /* Slightly reduced font size */
+  font-size: 2rem;
   color: #ffcc00;
   text-align: center;
   margin-bottom: 15px;
@@ -197,15 +194,15 @@
 }
 
 .reach-item {
-  width: 100px;
+  width: 120px;
   margin: 10px;
   text-align: center;
 }
 
 .reach-icon,
 .domain-icon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 5px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -225,7 +222,7 @@
 }
 
 .domain-item {
-  width: 100px;
+  width: 120px;
   margin: 10px;
   text-align: center;
 }
@@ -236,18 +233,6 @@
   transform: scale(1.2); /* Slightly enlarge the icon */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Soft glow effect */
-}
-
-/* Footer Fix */
-footer {
-  padding: 20px;
-  margin-top: 0;
-  text-align: center;
-  width: 100%; /* Ensure it stays within screen width */
-  box-sizing: border-box; /* Prevents overflow */
-  background-color: #1a1a1a; /* Optional: add a background color */
-  position: relative;
-  bottom: 0;
 }
 
 /* Responsive Design for Dropdown */
@@ -295,7 +280,7 @@ footer {
   }
 
   .nss-unit-title {
-    font-size: 1.8rem; /* Increased font size for NSS UNIT title */
+    font-size: 1.5rem;
   }
 
   .nss-slogan {
@@ -303,19 +288,19 @@ footer {
   }
 
   .nss-register-btn {
-    font-size: 1rem; /* Increased font size */
-    padding: 10px 20px; /* Increased button padding */
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 
   .reach-item,
   .domain-item {
-    width: 90px; /* Reduced width for better fit on mobile */
+    width: 100px;
   }
 
   .reach-icon,
   .domain-icon {
-    width: 45px; /* Reduced icon size */
-    height: 45px; /* Reduced icon size */
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -344,7 +329,7 @@ footer {
   }
 
   .nss-unit-title {
-    font-size: 1.4rem; /* Increased font size */
+    font-size: 1.2rem;
   }
 
   .nss-slogan {
@@ -352,13 +337,13 @@ footer {
   }
 
   .nss-register-btn {
-    font-size: 0.9rem;
-    padding: 8px 16px; /* Increased padding */
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 
   .reach-item,
   .domain-item {
-    width: 70px; /* Further reduced size */
+    width: 80px;
   }
 
   .reach-icon,

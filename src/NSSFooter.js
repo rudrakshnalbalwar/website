@@ -1,9 +1,7 @@
 import React from "react";
 import "./NSSFooter.css";
-import Facebook from "./Images/Facebook.png";
 import Instagram from "./Images/Instagram.png";
 import Linkedin from "./Images/Linkedin.png";
-import X from "./Images/X.png";
 
 const Footer = () => {
   return (
