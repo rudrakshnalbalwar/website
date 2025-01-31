@@ -308,7 +308,6 @@
   .reach-item {
     display: flex;
     align-items: center;
-    background-color: #222;
     padding: 10px;
     border-radius: 8px;
     text-align: left;
@@ -387,7 +386,6 @@
   .reach-item {
     display: flex;
     align-items: center;
-    background-color: #222;
     padding: 10px;
     border-radius: 8px;
     text-align: left;
