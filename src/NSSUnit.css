@@ -299,31 +299,49 @@
   }
 
   .nss-reach-icons {
-    grid-template-columns: 1fr 1fr; /* 2 columns for mobile */
-    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    width: 100%;
   }
 
   .reach-item {
-    text-align: center; /* Center the text for each item */
-  }
-
-  .reach-item:nth-child(odd) {
-    text-align: left; /* First column left aligned */
-  }
-
-  .reach-item:nth-child(even) {
-    text-align: center; /* Second column center aligned */
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    width: 100%;
+    min-height: 60px; /* Ensures all rows have equal height */
   }
 
   .reach-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0; /* Prevents the icon from shrinking */
   }
 
-  .reach-text {
-    font-size: 0.9rem;
+  .reach-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+
+  .reach-label {
+    font-size: 0.85rem;
+    font-weight: bold;
     color: white;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .reach-number {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffcc00;
   }
 }
 
@@ -369,21 +387,34 @@
   .reach-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    background-color: #222;
     padding: 10px;
     border-radius: 8px;
+    text-align: left;
+    width: 100%;
+    min-height: 60px; /* Ensures all rows have equal height */
   }
 
   .reach-icon {
     width: 35px;
     height: 35px;
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+  }
+
+  .reach-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 10px;
   }
 
   .reach-label {
-    flex-grow: 1;
-    text-align: left;
-    font-size: 0.9rem;
-    margin-left: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .reach-number {
