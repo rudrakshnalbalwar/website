@@ -108,61 +108,60 @@ const NSSUnit = () => {
 
       {/* Our Reach Section */}
       <div className="nss-reach">
-  <h2 className="nss-reach-title">OUR REACH</h2>
-  
-  <div className="nss-reach-icons">
-    {/* Row 1 */}
-    <div className="reach-item">
-      <img src={Volunteers} alt="Volunteers" className="reach-icon" />
-      <div className="reach-content">
-        <span className="reach-label">Volunteers</span>
-        <span className="reach-number">10,000+</span>
-      </div>
-    </div>
+        <h2 className="nss-reach-title">OUR REACH</h2>
+        <div className="nss-reach-icons">
+          {/* First Row */}
+          <div className="reach-item">
+            <img src={Volunteers} alt="Volunteers" className="reach-icon" />
+            <span className="reach-label">Volunteers</span>
+            <div className="reach-content">
+              <span className="reach-number">10,000+</span>
+            </div>
+          </div>
 
-    <div className="reach-item">
-      <img src={HC} alt="Happy Children" className="reach-icon" />
-      <div className="reach-content">
-        <span className="reach-label">Happy Children</span>
-        <span className="reach-number">50,000+</span>
-      </div>
-    </div>
+          <div className="reach-item">
+            <img src={HC} alt="Happy Children" className="reach-icon" />
+            <span className="reach-label">Happy Children</span>
+            <div className="reach-content">
+              <span className="reach-number">50,000+</span>
+            </div>
+          </div>
 
-    {/* Row 2 */}
-    <div className="reach-item">
-      <img src={NEWS} alt="News Features" className="reach-icon" />
-      <div className="reach-content">
-        <span className="reach-label">News Features</span>
-        <span className="reach-number">50+</span>
-      </div>
-    </div>
+          {/* Second Row */}
+          <div className="reach-item">
+            <img src={NEWS} alt="News Features" className="reach-icon" />
+            <span className="reach-label">News Features</span>
+            <div className="reach-content">
+              <span className="reach-number">50+</span>
+            </div>
+          </div>
 
-    <div className="reach-item">
-      <img src={Followers} alt="Facebook Followers" className="reach-icon" />
-      <div className="reach-content">
-        <span className="reach-label">Facebook Followers</span>
-        <span className="reach-number">20,000+</span>
-      </div>
-    </div>
+          <div className="reach-item">
+            <img src={Followers} alt="Facebook Followers" className="reach-icon" />
+            <span className="reach-label">Facebook Followers</span>
+            <div className="reach-content">
+              <span className="reach-number">20,000+</span>
+            </div>
+          </div>
 
-    {/* Row 3 */}
-    <div className="reach-item">
-      <img src={SE} alt="Student Engagement" className="reach-icon" />
-      <div className="reach-content">
-        <span className="reach-label">Students Engaged</span>
-        <span className="reach-number">5,000+</span>
-      </div>
-    </div>
+          {/* Third Row */}
+          <div className="reach-item">
+            <img src={SE} alt="Student Engagement" className="reach-icon" />
+            <span className="reach-label">Students Engaged</span>
+            <div className="reach-content">
+              <span className="reach-number">5,000+</span>
+            </div>
+          </div>
 
-    <div className="reach-item">
-      <img src={Insta} alt="Instagram Followers" className="reach-icon" />
-      <div className="reach-content">
-        <span className="reach-label">Instagram Followers</span>
-        <span className="reach-number">30,000+</span>
+          <div className="reach-item">
+            <img src={Insta} alt="Instagram Followers" className="reach-icon" />
+            <span className="reach-label">Instagram Followers</span>
+            <div className="reach-content">
+              <span className="reach-number">30,000+</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
       {/* Domains Section */}
       <div className="nss-domains">
