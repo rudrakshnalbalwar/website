@@ -99,6 +99,7 @@
 
     .footer-section {
         min-height: 180px; /* Maintain equal height */
+        min-width: 145px;
         padding: 10px;
     }
 
