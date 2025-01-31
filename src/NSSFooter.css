@@ -2,24 +2,26 @@
 .nss-footer {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* Ensures all sections have equal height */
+    align-items: stretch;
     background: black;
     color: white;
     width: 100%;
     text-align: center;
-    flex-wrap: nowrap; /* Keeps sections in a single row */
+    flex-wrap: nowrap; /* ✅ Forces sections to stay in a single row */
 }
 
 /* Equal-Sized Sections */
 .footer-section {
-    flex: 1; /* Ensures equal width */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Aligns content at the top */
+    justify-content: flex-start;
     align-items: center;
     padding: 15px;
     box-sizing: border-box;
-    min-height: 220px; /* Set consistent height */
+    min-height: 220px;
+    width: 33.33%; /* ✅ Always takes 1/3rd of the space */
+    max-width: 33.33%;
 }
 
 /* Background Colors */
@@ -36,13 +38,13 @@
 /* ✅ Fix for Misaligned Headings */
 .footer-section h3 {
     border-bottom: 2px solid #ff00ff;
-    display: inline-block;
     font-size: 1rem;
     margin-bottom: 10px;
-    min-height: 30px; /* Ensures all headings have the same height */
+    min-height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 /* Quick Links */
@@ -90,35 +92,26 @@
     margin: 3px 0;
 }
 
-/* ✅ Mobile Fix: Keep Sections in One Row */
+/* ✅ Ensuring 3 Sections Stay in a Row Even on Small Screens */
 @media (max-width: 768px) {
     .nss-footer {
-        display: flex;
-        flex-wrap: nowrap; /* Keep everything in one row */
+        flex-wrap: nowrap; /* ✅ Prevents wrapping */
     }
 
     .footer-section {
-        min-height: 180px; /* Maintain equal height */
-        min-width: 142px;
+        width: 33.33%; /* ✅ Ensures 3 sections per row */
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        font-size: 0.8rem; /* ✅ Reduces text size for smaller screens */
         padding: 10px;
-    }
-
-    .footer-section h3 {
-        font-size: 0.9rem;
-        min-height: 30px; /* Ensures headings are always aligned */
-    }
-
-    .footer-section ul li {
-        font-size: 0.8rem;
     }
 
     .social-icons img {
         width: 24px;
         height: 24px;
-    }
-
-    .footer-section p,
-    .footer-section a {
-        font-size: 0.8rem;
     }
 }
