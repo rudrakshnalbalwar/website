@@ -181,8 +181,43 @@
   margin-bottom: 15px;
 }
 
-/* Icons Layout */
-.nss-reach-icons,
+/* Reach Icons Layout */
+.nss-reach-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  gap: 15px; /* Space between items */
+  align-items: center;
+  width: 100%;
+}
+
+.reach-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.reach-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.reach-text {
+  font-size: 1rem;
+  color: white;
+}
+
+.reach-number {
+  color: #ffcc00;
+}
+
+.reach-item:hover .reach-icon {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
 .nss-domains-icons {
   display: flex;
   flex-wrap: wrap;
@@ -190,14 +225,12 @@
   gap: 15px; /* Space between icons */
 }
 
-.reach-item,
 .domain-item {
   width: 100px;
   text-align: center;
   font-size: 0.8rem;
 }
 
-.reach-icon,
 .domain-icon {
   width: 50px;
   height: 50px;
@@ -205,11 +238,12 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.reach-item:hover .reach-icon,
 .domain-item:hover .domain-icon {
   transform: scale(1.2);
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
+
+
 
 
 /* Responsive Design */
@@ -263,6 +297,34 @@
     font-size: 1.1rem;
     padding: 10px 20px;
   }
+
+  .nss-reach-icons {
+    grid-template-columns: 1fr 1fr; /* 2 columns for mobile */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  }
+
+  .reach-item {
+    text-align: center; /* Center the text for each item */
+  }
+
+  .reach-item:nth-child(odd) {
+    text-align: left; /* First column left aligned */
+  }
+
+  .reach-item:nth-child(even) {
+    text-align: center; /* Second column center aligned */
+  }
+
+  .reach-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .reach-text {
+    font-size: 0.9rem;
+    color: white;
+  }
 }
 
 @media (max-width: 480px) {
@@ -297,6 +359,39 @@
     padding: 12px 24px;
   }
 
+  .nss-reach-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .reach-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .reach-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .reach-label {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+
+  .reach-number {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+
   /* Icons Layout */
   .nss-domains-icons {
     display: grid;
@@ -312,5 +407,6 @@
 .domain-items:nth-child(6) {
   grid-column: span 1.5; /* Distributes bottom two icons evenly */
   justify-self: center;  /* Centers them properly */
+  
 }
 }
