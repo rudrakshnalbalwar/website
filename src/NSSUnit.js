@@ -189,7 +189,7 @@ const NSSUnit = () => {
           </div>
           <div className="domain-item">
             <img src={Rural} alt="Environment" className="domain-icon" />
-            <p>Rural</p>
+            <p>RURAL</p>
           </div>
         </div>
       </div>

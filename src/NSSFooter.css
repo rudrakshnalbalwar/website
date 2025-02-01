@@ -1,27 +1,24 @@
 /* Footer Container */
 .nss-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ Ensures 3 equal sections */
+    gap: 10px;
     background: black;
     color: white;
     width: 100%;
     text-align: center;
-    flex-wrap: nowrap; /* ✅ Forces sections to stay in a single row */
+    padding: 15px 0;
 }
 
-/* Equal-Sized Sections */
+/* Footer Section */
 .footer-section {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
     padding: 15px;
     box-sizing: border-box;
     min-height: 220px;
-    width: 33.33%; /* ✅ Always takes 1/3rd of the space */
-    max-width: 33.33%;
 }
 
 /* Background Colors */
@@ -35,15 +32,11 @@
     color: black;
 }
 
-/* ✅ Fix for Misaligned Headings */
+/* Headings */
 .footer-section h3 {
     border-bottom: 2px solid #ff00ff;
     font-size: 1rem;
     margin-bottom: 10px;
-    min-height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
 }
 
@@ -92,22 +85,26 @@
     margin: 3px 0;
 }
 
-/* ✅ Ensuring 3 Sections Stay in a Row Even on Small Screens */
+/* ✅ Responsive Fix for Smaller Screens */
 @media (max-width: 768px) {
     .nss-footer {
-        flex-wrap: nowrap; /* ✅ Prevents wrapping */
+        grid-template-columns: repeat(3, 1fr); /* ✅ Keeps 3 sections in a row */
     }
 
     .footer-section {
-        width: 33.33%; /* ✅ Ensures 3 sections per row */
-        max-width: 33.33%;
+        padding: 10px;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
+    .nss-footer {
+        grid-template-columns: repeat(3, 1fr); /* ✅ Ensures 3 columns on small screens */
+    }
+
     .footer-section {
-        font-size: 0.8rem; /* ✅ Reduces text size for smaller screens */
-        padding: 10px;
+        font-size: 0.8rem;
+        padding: 8px;
     }
 
     .social-icons img {
