@@ -1,30 +1,27 @@
 /* Footer Container */
 .nss-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch; /* Ensures all sections have equal height */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ Always 3 equal sections */
+    width: 100%;
     background: black;
     color: white;
-    width: 100%;
     text-align: center;
-    flex-wrap: nowrap; /* Keeps sections in a single row */
 }
 
-/* Equal-Sized Sections */
+/* Footer Sections - Full Width */
 .footer-section {
-    flex: 1; /* Ensures equal width */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Aligns content at the top */
     align-items: center;
-    padding: 15px;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 220px;
     box-sizing: border-box;
-    min-height: 220px; /* Set consistent height */
+    width: 100%;
 }
 
-/* Background Colors */
-.footer-section:first-child,
-.footer-section:last-child {
+/* Shared Background Colors */
+.footer-section:first-child {
     background: #1a1a1a;
 }
 
@@ -33,22 +30,24 @@
     color: black;
 }
 
-/* ✅ Fix for Misaligned Headings */
+.footer-section:last-child {
+    background: #1a1a1a;
+}
+
+/* Headings */
 .footer-section h3 {
     border-bottom: 2px solid #ff00ff;
-    display: inline-block;
     font-size: 1rem;
     margin-bottom: 10px;
-    min-height: 30px; /* Ensures all headings have the same height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
 }
 
 /* Quick Links */
 .footer-section ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .footer-section ul li {
@@ -90,34 +89,30 @@
     margin: 3px 0;
 }
 
-/* ✅ Mobile Fix: Keep Sections in One Row */
+/* ✅ Ensuring Full-Width & Single Row on All Screens */
 @media (max-width: 768px) {
     .nss-footer {
-        display: flex;
-        flex-wrap: nowrap; /* Keep everything in one row */
+        grid-template-columns: repeat(3, 1fr); /* ✅ Stays in one row */
     }
 
     .footer-section {
-        min-height: 180px; /* Maintain equal height */
-        padding: 10px;
-    }
-
-    .footer-section h3 {
+        padding: 15px;
         font-size: 0.9rem;
-        min-height: 30px; /* Ensures headings are always aligned */
+    }
+}
+
+@media (max-width: 480px) {
+    .nss-footer {
+        grid-template-columns: repeat(3, 1fr); /* ✅ Ensures 3 columns */
     }
 
-    .footer-section ul li {
+    .footer-section {
         font-size: 0.8rem;
+        padding: 10px;
     }
 
     .social-icons img {
         width: 24px;
         height: 24px;
-    }
-
-    .footer-section p,
-    .footer-section a {
-        font-size: 0.8rem;
     }
 }

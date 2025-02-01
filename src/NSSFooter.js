@@ -15,6 +15,7 @@ const Footer = () => {
           <li><a href="#">Team</a></li>
           <li><a href="#">Events</a></li>
           <li><a href="#">Gallery</a></li>
+          <li><a href="#">Sports</a></li>
         </ul>
       </div>
 
@@ -34,7 +35,7 @@ const Footer = () => {
       {/* Contact Section */}
       <div className="footer-section">
         <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:nss@ramdeobaba.edu">nss@ramdeobaba.edu</a></p>
+        <p>Email: <br></br><a href="mailto:nss@ramdeobaba.edu">nss@ramdeobaba.edu</a></p>
         <p>Ph: +91 9876543210</p>
         <p>Address: Ramdeobaba University, Nagpur</p>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./NSSUnit.css";
 import NSSFooter from "./NSSFooter.js";
 import UniversityLogo from "./UniversityLogo.png";
@@ -15,6 +16,7 @@ import Innovation from "./Images/Innovation.png";
 import Society from "./Images/Society.png";
 import Environment from "./Images/Environment.png";
 import Rural from "./Images/Rural.png";
+import Gallery from "./Gallery.js";
 
 const NSSUnit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,7 +42,7 @@ const NSSUnit = () => {
       <header className="nss-header">
         <div className="nss-header-left">
           <img src={UniversityLogo} alt="University Logo" className="nss-logo" />
-          <h1 className="nss-title">RAMDEOBABA UNIVERSITY</h1>
+          <h1 className="nss-title">RAMDEOBABA UNIVERSITY<span className="nss-sports"> <a href="#" target="_blank">NSS</a> | <a href="https://www.rknec.edu/Sports.aspx" target="_blank">SPORTS</a></span></h1>
         </div>
 
         {/* Menu Icon */}
@@ -52,10 +54,10 @@ const NSSUnit = () => {
         {menuOpen && (
           <nav className={`nss-dropdown ${menuOpen ? "open" : ""}`}>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Gallery</a></li>
+            <li><Link to="/">Home</Link></li>
+      <li><Link to="/events">Events</Link></li>
+      <li><Link to="/team">Team</Link></li>
+      <li><Link to="/gallery">Gallery</Link></li>
             </ul>
           </nav>
         )}
@@ -110,29 +112,48 @@ const NSSUnit = () => {
       <div className="nss-reach">
         <h2 className="nss-reach-title">OUR REACH</h2>
         <div className="nss-reach-icons">
+          {/* First Row */}
           <div className="reach-item">
+            
+            <div className="reach-content">
             <img src={Volunteers} alt="Volunteers" className="reach-icon" />
-            <p>VOLUNTEERS</p>
+              <span className="reach-number">10,000+</span>
+            </div>
+            <span className="reach-label">Volunteers</span>
           </div>
+
           <div className="reach-item">
+            <div className="reach-content">
             <img src={HC} alt="Happy Children" className="reach-icon" />
-            <p>HAPPY CHILDREN</p>
+              <span className="reach-number">50,000+</span>
+            </div>
+            <span className="reach-label">Happy Children</span>
           </div>
+
+          {/* Second Row */}
           <div className="reach-item">
-            <img src={NEWS} alt="News" className="reach-icon" />
-            <p>NEWS</p>
+            <div className="reach-content">
+            <img src={NEWS} alt="News Features" className="reach-icon" />
+              <span className="reach-number">50+</span>
+            </div>
+            <span className="reach-label">News Features</span>
           </div>
+
+          {/* Third Row */}
           <div className="reach-item">
-            <img src={Followers} alt="Facebook Followers" className="reach-icon" />
-            <p>FACEBOOK FOLLOWERS</p>
-          </div>
-          <div className="reach-item">
+            <div className="reach-content">
             <img src={SE} alt="Student Engagement" className="reach-icon" />
-            <p>STUDENT ENGAGEMENT</p>
+              <span className="reach-number">5,000+</span>
+            </div>
+            <span className="reach-label">Students Engaged</span>
           </div>
+
           <div className="reach-item">
+            <div className="reach-content">
             <img src={Insta} alt="Instagram Followers" className="reach-icon" />
-            <p>INSTAGRAM FOLLOWERS</p>
+              <span className="reach-number">30,000+</span>
+            </div>
+            <span className="reach-label">Instagram Followers</span>
           </div>
         </div>
       </div>
@@ -163,7 +184,7 @@ const NSSUnit = () => {
           </div>
           <div className="domain-item">
             <img src={Rural} alt="Environment" className="domain-icon" />
-            <p>Rural</p>
+            <p>RURAL</p>
           </div>
         </div>
       </div>
