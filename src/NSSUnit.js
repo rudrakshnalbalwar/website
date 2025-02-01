@@ -54,7 +54,7 @@ const NSSUnit = () => {
         {menuOpen && (
           <nav className={`nss-dropdown ${menuOpen ? "open" : ""}`}>
             <ul>
-            <li><Link to="#">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
       <li><Link to="/events">Events</Link></li>
       <li><Link to="/team">Team</Link></li>
       <li><Link to="/gallery">Gallery</Link></li>

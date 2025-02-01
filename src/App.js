@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="#" element={<NSSUnit />} />
+        <Route path="/" element={<NSSUnit />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/full-gallery/:year/:eventName" element={<EventPage />} />
       </Routes>
