@@ -40,7 +40,7 @@ const NSSUnit = () => {
       <header className="nss-header">
         <div className="nss-header-left">
           <img src={UniversityLogo} alt="University Logo" className="nss-logo" />
-          <h1 className="nss-title">RAMDEOBABA UNIVERSITY</h1>
+          <h1 className="nss-title">RAMDEOBABA UNIVERSITY<span className="nss-sports"> <a href="#" target="_blank">NSS</a> | <a href="https://www.rknec.edu/Sports.aspx" target="_blank">SPORTS</a></span></h1>
         </div>
 
         {/* Menu Icon */}

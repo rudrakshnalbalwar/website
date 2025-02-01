@@ -31,9 +31,30 @@
 }
 
 .nss-title {
-  color: white;
   font-size: 1.5rem;
   font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nss-sports {
+    font-size: 1rem;
+    color: #ffcc00;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.nss-sports a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nss-sports a:hover {
+  text-decoration: underline;
 }
 
 /* Menu icon for mobile screens */

@@ -15,6 +15,7 @@ const Footer = () => {
           <li><a href="#">Team</a></li>
           <li><a href="#">Events</a></li>
           <li><a href="#">Gallery</a></li>
+          <li><a href="#">Sports</a></li>
         </ul>
       </div>
 
