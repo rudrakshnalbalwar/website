@@ -9,7 +9,7 @@ import EventPage from "./EventPage.js";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/website">
       <Routes>
         <Route path="/" element={<NSSUnit />} />
         <Route path="/gallery" element={<Gallery />} />
