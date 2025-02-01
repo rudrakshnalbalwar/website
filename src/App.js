@@ -5,6 +5,7 @@ import './App.css';
 import RamdeobabaNSS from './RamdeobabaNSS.js';
 import NSSUnit from './NSSUnit.js';
 import Gallery from './Gallery.js';
+import EventPage from "./EventPage.js";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<NSSUnit />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/full-gallery/:year/:eventName" element={<EventPage />} />
       </Routes>
     </Router>
   );
