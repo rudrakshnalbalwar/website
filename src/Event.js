@@ -1,7 +1,7 @@
 import React from 'react';
-import './Eventpage.css';
+import './Event.css';
 
-const App = () => {
+const Event = () => {
   const events = [
     { name: 'PRERNA', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
     { name: 'AARAMBH FOUNDATION WEEK', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
@@ -39,4 +39,4 @@ const App = () => {
   );
 };
 
-export default Eventpage;
+export default Event;
