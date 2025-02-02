@@ -1,5 +1,7 @@
 import React from 'react';
 import './Event.css';
+import Navbar from "./Navbar.js";
+import NSSFooter from "./NSSFooter.js";
 
 const Event = () => {
   const events = [
@@ -15,7 +17,8 @@ const Event = () => {
   ];
 
   return (
-
+    <div>
+      < Navbar/>
       <div className="events-container">
         {/* Events Section */}
         <section>
@@ -35,6 +38,8 @@ const Event = () => {
             ))}
           </div>
         </section>
+      </div>
+      < NSSFooter/>
       </div>
   );
 };
