@@ -1,5 +1,7 @@
 import React from "react";
 import "./Teampage.css";
+import Navbar from "./Navbar.js";
+import NSSFooter from "./NSSFooter.js";
 
 const teamMembers = [
   { id: "incharge", name: "Dr. Amit Anurag", role: "Program Incharge", image: "https://image.nssiitd.in/current_team/Parth_Soni_Gsecy.jpg" },
@@ -46,6 +48,7 @@ const teamMembers = [
 const Teampage = () => {
   return (
     <div>
+      < Navbar/>
     <div className="team-container-heading">
       <h1>Welcome To The NSS Core Team</h1>
     </div>
@@ -61,6 +64,7 @@ const Teampage = () => {
         ))}
       </div>
     </div>
+    < NSSFooter/>
     </div>
   );
 };
