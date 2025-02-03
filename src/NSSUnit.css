@@ -1,11 +1,28 @@
 /* Main container */
 .nss-container {
+  position: relative;
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
-  background-color: #000000d7;
   margin: 0;
   padding: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.nss-container::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/008/311/935/small_2x/the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-for-presentation-background-website-landing-page-wallpaper-vector.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(10px);  /* Apply blur effect */
+  transform: scale(1.1); /* Prevents visible edges due to blur */
+  z-index: -1;
+  opacity: 0.6; /* Adjust transparency */
 }
 
 /* Header section */
@@ -223,7 +240,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://static.vecteezy.com/system/resources/thumbnails/008/311/935/small_2x/the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-for-presentation-background-website-landing-page-wallpaper-vector.jpg') no-repeat center center;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOzwSuhQCFMf-A88Ynl3on7TMDDyyzrASjiw&s') no-repeat center center;
   background-size: cover;
   filter: blur(10px);  /* Apply blur effect */
   transform: scale(1.1); /* Prevents visible edges due to blur */
