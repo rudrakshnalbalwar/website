@@ -4,6 +4,7 @@
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
+  background: linear-gradient(to bottom,#1a1a1a, #000000);
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -54,24 +55,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.nss-sports {
-    font-size: 1rem;
-    color: #ffcc00;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-
-.nss-sports a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nss-sports a:hover {
-  text-decoration: underline;
 }
 
 /* Menu icon for mobile screens */
@@ -183,7 +166,7 @@
 .nss-vision, .nss-who-we-are, .nss-what-we-do {
   position: relative;
   padding: 40px;
-  margin: 20px 10px;
+  margin: 15px 10px;
   border-radius: 10px;
   color: white;
   text-align: center;
@@ -199,7 +182,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('./Images/NSS_BG.webp') no-repeat center center;
+  /* background: url('./Images/NSS_BG.webp') no-repeat center center; */
   background-size: cover;
   filter: blur(10px);  /* Apply blur effect */
   transform: scale(1.1); /* Prevents visible edges due to blur */
@@ -227,7 +210,7 @@
   padding: 20px;
   margin: 20px 10px;
   border-radius: 10px;
-  background-color: black;
+  /* background-color: black; */
   text-align: center;
   z-index: 1;
   overflow: hidden;
@@ -240,6 +223,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  /* background: url('https://static.vecteezy.com/system/resources/thumbnails/008/311/935/small_2x/the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-for-presentation-background-website-landing-page-wallpaper-vector.jpg') no-repeat center center; */
   background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOzwSuhQCFMf-A88Ynl3on7TMDDyyzrASjiw&s') no-repeat center center;
   background-size: cover;
   filter: blur(10px);  /* Apply blur effect */
@@ -261,7 +245,7 @@
 .nss-reach {
   text-align: center;
   padding: 40px 20px;
-  background-color: black;
+  /* background-color: black; */
   color: white;
 }
 
@@ -361,7 +345,7 @@
     top: 60px;
     right: 0;
     width: 100%;
-    border-radius: 0;
+    border-radius: 10;
   }
 
   .nss-dropdown ul {
@@ -376,6 +360,12 @@
   .nss-dropdown ul li a {
     font-size: 1.2rem;
   }
+  
+.nss-dropdown.open {
+  display: block;
+  width: 40%;
+  opacity: 0.9;
+}
 
   .nss-title {
     font-size: 1.2rem;
