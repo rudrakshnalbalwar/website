@@ -1,10 +1,11 @@
 /* Main container */
 .nss-container {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background: #ffffff;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to bottom,#1a1a1a, #000000);
   margin: 0;
-  padding-top: 70px; /* For fixed header */
+  padding: 0;
 }
 
 /* Header section */
@@ -157,11 +158,32 @@
   color: #B20000;
   margin-bottom: 40px;
   text-align: center;
+  z-index: 1;
+  overflow: hidden;
 }
 
-/* Vision Section */
-.nss-vision {
-  background: #f8f8f8;
+.nss-reach::before, .nss-domains::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url('https://static.vecteezy.com/system/resources/thumbnails/008/311/935/small_2x/the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-for-presentation-background-website-landing-page-wallpaper-vector.jpg') no-repeat center center; */
+  background-size: cover;
+  filter: blur(10px);  /* Apply blur effect */
+  transform: scale(1.1); /* Prevents visible edges due to blur */
+  z-index: -1;
+  opacity: 0.6; /* Adjust transparency */
+}
+
+/* Section Titles */
+.nss-reach-title,
+.nss-domains-title {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 /* Our Reach Section */
