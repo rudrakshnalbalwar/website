@@ -76,9 +76,10 @@ const NSSUnit = () => {
       </div>
 
       {/* Our Vision Section */}
+      <div className="nss-content2">
       <div className="nss-vision">
-        <h2 className="nss-vision-title">OUR VISION</h2>
-        <p className="nss-vision-text">
+        <h2 className="nss-section-title">OUR VISION</h2>
+        <p className="nss-section-text">
           The vision of the National Service Scheme (NSS) is to develop the
           character and personality of students through voluntary community
           service. 
@@ -105,6 +106,7 @@ const NSSUnit = () => {
           welfare programs. By participating in NSS, students develop leadership, 
           empathy, and a deep sense of responsibility toward society.
         </p>
+      </div>
       </div>
 
       {/* Our Reach Section */}
