@@ -2,8 +2,8 @@
 .gallery-container {
     text-align: center;
     padding: 20px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     position: relative; /* Ensure proper layering of elements */
     background-color: white;
   }
@@ -107,6 +107,13 @@
     font-weight: bold;
     margin-top: 10px;
     color: #ffcc00;
+  }
+
+  .gallery-year-heading {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 20px;
   }
   
   /* Dots Indicator */
