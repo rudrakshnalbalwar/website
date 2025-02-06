@@ -5,6 +5,7 @@
     background-color: black;
     color: white;
     position: relative; /* Ensure proper layering of elements */
+    background-color: white;
   }
   
   /* Gallery Title */
@@ -13,15 +14,15 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
-    color: white;
+    color: black;
     position: relative;
   }
   
   /* Pink Underline Below Title */
   .pink-underline {
-    width: 60px;
+    width: 80px;
     height: 4px;
-    background-color: #ff00ff;
+    background-color: #ffae00;
     margin: 10px auto;
   }
   
@@ -34,7 +35,7 @@
     overflow: hidden;
     width: 100%;
     transition: transform 0.5s ease-in-out;
-    background-color: black; /* Ensure no white background */
+    background-color: white; /* Ensure no white background */
   }
   
   /* Gallery Image Container (for overlay text) */
