@@ -3,14 +3,13 @@
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
-  background: linear-gradient(to bottom,#1a1a1a, #000000);
   margin: 0;
   padding: 0;
 }
 
 /* Header section */
 .nss-header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -36,7 +35,7 @@
 .nss-title {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #B20000;
+  color: #000000;
   margin: 0;
 }
 
@@ -97,9 +96,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./Images/NSScandles.jpg');
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Images/stats.JPG ');
   background-size: cover;
   background-position: center;
+  background-attachment: scroll;
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -144,37 +144,38 @@
   transform: translateY(-2px);
 }
 
+.nss-content2 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Images/NSScandles.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
 /* Sections Styling */
 .nss-vision, 
 .nss-who-we-are, 
 .nss-what-we-do,
 .nss-reach,
 .nss-domains {
-  padding: 80px 20px;
+  padding: 20px;
 }
 
 .nss-section-title {
   font-size: 2.5rem;
-  color: #B20000;
+  color: #ff9900;
   margin-bottom: 40px;
   text-align: center;
   z-index: 1;
   overflow: hidden;
-}
-
-.nss-reach::before, .nss-domains::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: url('https://static.vecteezy.com/system/resources/thumbnails/008/311/935/small_2x/the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-for-presentation-background-website-landing-page-wallpaper-vector.jpg') no-repeat center center; */
-  background-size: cover;
-  filter: blur(10px);  /* Apply blur effect */
-  transform: scale(1.1); /* Prevents visible edges due to blur */
-  z-index: -1;
-  opacity: 0.6; /* Adjust transparency */
 }
 
 /* Section Titles */
@@ -188,7 +189,14 @@
 
 /* Our Reach Section */
 .nss-reach {
-  background: #fff;
+  background: none;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./Images/stats.JPG ');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  opacity: 0.9;
 }
 
 .nss-reach-icons {
@@ -200,11 +208,12 @@
 }
 
 .reach-item {
-  background: #fff;
+  background: none;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  opacity: 80%;
 }
 
 .reach-item:hover {
@@ -227,12 +236,13 @@
 
 .reach-label {
   font-size: 1.1rem;
-  color: #666;
+  color: #ffffff;
 }
 
 /* Domains Section */
 .nss-domains {
-  background: #f8f8f8;
+  background: white;
+  color: black;
 }
 
 .nss-domains-icons {
@@ -316,6 +326,6 @@
   }
   
   .nss-reach-icons {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
