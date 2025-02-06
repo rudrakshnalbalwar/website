@@ -16,14 +16,9 @@
     text-align: center;
     color: black;
     position: relative;
-  }
-  
-  /* Pink Underline Below Title */
-  .pink-underline {
-    width: 80px;
-    height: 4px;
-    background-color: #ffae00;
-    margin: 10px auto;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: #ffae00; /* Underline color */
   }
   
   /* Gallery Carousel */
