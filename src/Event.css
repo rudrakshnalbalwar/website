@@ -11,7 +11,7 @@
   text-align: center;
   font-size: 36px;
   font-weight: bold;
-  color: #333;
+  color: black;
   margin-bottom: 40px;
   text-decoration: underline;
   text-underline-offset: 8px;
@@ -75,7 +75,7 @@
 
 .event-slide-image {
   width: 100%;
-  height: auto;
+  height: 280px;
   border-radius: 8px;
   transition: transform 0.5s ease-in-out;
 }
@@ -117,6 +117,10 @@
   .event-box {
     padding: 15px;
   }
+
+  .event-slide-image {
+    height: 250px;
+  }
 }
 
 /* Additional Media Query for small screens */
@@ -135,5 +139,9 @@
 
   .events-list {
     grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .event-slide-image {
+    height: 200px;
   }
 }
