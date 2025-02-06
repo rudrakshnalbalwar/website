@@ -96,9 +96,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./Images/stats.JPG ');
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Images/stats.JPG ');
   background-size: cover;
   background-position: center;
+  background-attachment: scroll;
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -150,9 +151,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./Images/NSScandles.jpg');
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Images/NSScandles.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -164,7 +166,7 @@
 .nss-what-we-do,
 .nss-reach,
 .nss-domains {
-  padding: 80px 20px;
+  padding: 20px;
 }
 
 .nss-section-title {
@@ -324,6 +326,6 @@
   }
   
   .nss-reach-icons {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
