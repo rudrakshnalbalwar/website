@@ -1,0 +1,118 @@
+/* Footer Container */
+.nss-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ Always 3 equal sections */
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+/* Footer Sections - Full Width */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 220px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Shared Background Colors */
+.footer-section:first-child {
+    background: #1a1a1a;
+}
+
+.footer-section:nth-child(2) {
+    background: linear-gradient(to bottom, #d9d9d9, #bfbfbf);
+    color: black;
+}
+
+.footer-section:last-child {
+    background: #1a1a1a;
+}
+
+/* Headings */
+.footer-section h3 {
+    border-bottom: 2px solid #ff00ff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+/* Quick Links */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Info */
+.footer-section p,
+.footer-section a {
+    font-size: 0.85rem;
+    margin: 3px 0;
+}
+
+/* ✅ Ensuring Full-Width & Single Row on All Screens */
+@media (max-width: 768px) {
+    .nss-footer {
+        grid-template-columns: repeat(3, 1fr); /* ✅ Stays in one row */
+    }
+
+    .footer-section {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nss-footer {
+        grid-template-columns: repeat(3, 1fr); /* ✅ Ensures 3 columns */
+    }
+
+    .footer-section {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+}
