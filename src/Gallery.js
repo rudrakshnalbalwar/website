@@ -1,23 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Gallery.css";
-import img1 from "./Images/NSS_BG.webp";
-import img2 from "./Images/NSS_BG.webp";
-import img3 from "./Images/NSS_BG.webp";
+import img1 from "./Images/PRERNA/GramSampark/20240226_081146.jpg";
+import img2 from "./Images/PRERNA/DRISHTIKON/TimePhoto_20240222_121352.jpg";
+import img3 from "./Images/PRERNA/CHAKRVYUH/IMG_7741.JPG";
+import img4 from "./Images/PRERNA/PRAYAS/TimePhoto_20240223_160032.jpg";
+import img5 from "./Images/PRERNA/JUNOON/20240221_124242.jpg";
+import img6 from "./Images/PRERNA/NAYA-SUMMIT/20240222_113602.jpg";
 import Navbar from "./Navbar.js";
 import NSSFooter from "./NSSFooter.js";
 
 const galleryData = {
   2024: [
-    { img: img1, event: "event1" },
-    { img: img2, event: "event2" },
-    { img: img3, event: "event3" },
-  ],
-  2023: [
-    { img: img2, event: "event1" },
-    { img: img3, event: "event2" },
-    { img: img1, event: "event3" },
-  ],
+    { img: img1, event: "GRAM SAMPARK" },
+    { img: img2, event: "DRISHTIKON" },
+    { img: img3, event: "CHAKRVYUH" },
+    { img: img4, event: "PRAYAS" },
+    { img: img5, event: "JUNOON" },
+    { img: img6, event: "NAYA SUMMIT" },
+  ]
 };
 
 const Gallery = () => {
@@ -61,6 +62,12 @@ const Gallery = () => {
     };
   }, [years]);
 
+  // Function to handle navigation with formatted event names (e.g., lowercased with dashes)
+  const handleNavigate = (year, eventName) => {
+    const formattedEventName = eventName.toLowerCase().replace(/\s+/g, '_'); // Convert to lowercase and replace spaces with dashes
+    navigate(`/full-gallery/${year}/${formattedEventName}`);
+  };
+
   return (
     <div>
       <Navbar />
@@ -83,7 +90,7 @@ const Gallery = () => {
               {/* Navigate to the event page dynamically */}
               <div 
                 className="gallery-image-container" 
-                onClick={() => navigate(`/full-gallery/${year}/${galleryData[year][yearIndices[year] || 0].event}`)}
+                onClick={() => handleNavigate(year, galleryData[year][yearIndices[year] || 0].event)}
                 style={{ cursor: "pointer" }}
               >
                 <img
