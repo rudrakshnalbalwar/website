@@ -6,7 +6,7 @@ import Navbar from "./Navbar.js";
 import NSSFooter from "./NSSFooter.js";
 
 const teamMembers = [
-  { id: "incharge", name: "Dr. Amit Anurag", role: "Program Incharge", image: "https://image.nssiitd.in/current_team/Parth_Soni_Gsecy.jpg" },
+  { id: "incharge", name: "Dr. Amit Anurag", role: "Program Incharge", image: "https://www.rknec.edu/wp-content/uploads/2023/10/Prof.Anurag-Thakur.png" },
 
   { id: "secretary-1", name: "Yash Ghoderao", role: "Secretary", image: "https://image.nssiitd.in/current_team/Parth_Soni_Gsecy.jpg",instagram: "https://www.instagram.com/ghoderao_yash?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     linkedin: "https://www.linkedin.com/in/yash-ghoderao-243597289/" },
@@ -102,7 +102,7 @@ const Teampage = () => {
               <p>{member.role}</p>
               <div className="social-icons">
                 <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-                  <img src={Instagram} className="social-icon instagram" />
+                  <img src={Instagram} className="social-icon insta" />
                 </a>
                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                   <img src={LinkedIn} className="social-icon linkedin" />

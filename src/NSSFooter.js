@@ -2,6 +2,7 @@ import React from "react";
 import "./NSSFooter.css";
 import Instagram from "./Images/Instagram.png";
 import Linkedin from "./Images/Linkedin.png";
+import { Link } from "react-router-dom";  // Import Link at the top
 
 const Footer = () => {
   return (
@@ -11,11 +12,12 @@ const Footer = () => {
         <h3>Quick Links</h3>
         <ul>
         <li><a href="https://rbunagpur.in/" target="_blank">RBU Website</a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Sports</a></li>
+<li><Link to="/">Home</Link></li>
+<li><Link to="/team">Team</Link></li>
+<li><Link to="/events">Events</Link></li>
+<li><Link to="/gallery">Gallery</Link></li>
+<li><a href="https://rbunagpur.in/sports" target="_blank" rel="noopener noreferrer">Sports</a></li> 
+
         </ul>
       </div>
 

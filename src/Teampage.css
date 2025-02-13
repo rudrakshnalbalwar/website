@@ -1,28 +1,31 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: white;
-  color: white;
+  background: white;  /* Ensure whole page is white */
+  color: black;
   text-align: center;
 }
 
 .team-container {
   padding: 5rem;
+  background: white !important; /* Force white background */
+  color: black !important; /* Ensure text is black */
 }
 
-.team-container-heading{
-  padding: 1 rem;
-  margin-bottom: 2 rem5;
+.team-container-heading {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: black; /* Ensure heading is black */
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 5 rem;
+  gap: 5rem;
   justify-content: center;
   margin-top: 1rem;
   position: relative;
-  padding: 5 rem;
+  padding: 5rem;
 }
 
 .team-card {
@@ -33,13 +36,13 @@ body {
   margin-bottom: 70px;
   width: 300px 150px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out;
 }
 
 .team-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 15px 15px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
 }
 
 .profile-image {
@@ -280,7 +283,7 @@ body {
 
 .social-icon {
   font-size: 24px;
-  color: #333;
+  color: black;
   transition: color 0.3s ease-in-out;
 }
 
@@ -291,7 +294,6 @@ body {
 .insta:hover {
   color: #E4405F; /* Instagram pink */
 }
-
 
 .linkedin:hover {
   color: #0077b5; /* LinkedIn blue */

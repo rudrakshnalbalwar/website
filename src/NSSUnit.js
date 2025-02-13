@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from "react-router-dom";
 import "./NSSUnit.css";
 import NSSFooter from "./NSSFooter.js";
 import UniversityLogo from "./UniversityLogo.png";
@@ -17,9 +17,11 @@ import Society from "./Images/Society.png";
 import Environment from "./Images/Environment.png";
 import Rural from "./Images/Rural.png";
 import Gallery from "./Gallery.js";
+import PrernaRegistration from "./PrernaRegistration.js";
 
 const NSSUnit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -72,7 +74,7 @@ const NSSUnit = () => {
             <p className="nss-slogan">NOT ME, BUT YOU</p>
           </div>
         </div>
-        <button className="nss-register-btn">REGISTER FOR UPCOMING EVENTS</button>
+        <button className="nss-register-btn" onClick={() => navigate("/prerna-registration")}>REGISTER FOR UPCOMING EVENTS</button>
       </div>
 
       {/* Our Vision Section */}
