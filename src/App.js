@@ -12,7 +12,7 @@ import PrernaRegistration from './PrernaRegistration.js';
 
 function App() {
   return (
-    <Router basename="/">
+    <Router>
       <Routes>
         <Route path="/" element={<NSSUnit />} />
         <Route path="/gallery" element={<Gallery />} />
