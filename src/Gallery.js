@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Gallery.css";
-import img1 from "./Images/PRERNA/GramSampark/20240226_081146.jpg";
-import img2 from "./Images/PRERNA/DRISHTIKON/TimePhoto_20240222_121352.jpg";
-import img3 from "./Images/PRERNA/CHAKRVYUH/IMG_7741.JPG";
-import img4 from "./Images/PRERNA/PRAYAS/TimePhoto_20240223_160032.jpg";
-import img5 from "./Images/PRERNA/JUNOON/20240221_124242.jpg";
-import img6 from "./Images/PRERNA/NAYA-SUMMIT/20240222_113602.jpg";
+import img1 from "./Images/20240226_081146.jpg";
+import img2 from "./Images/TimePhoto_20240222_121352.jpg";
+import img3 from "./Images/IMG_7741.JPG";
+import img4 from "./Images/TimePhoto_20240223_160032.jpg";
+import img5 from "./Images/20240221_124242.jpg";
+import img6 from "./Images/20240222_113602.jpg";
 import Navbar from "./Navbar.js";
 import NSSFooter from "./NSSFooter.js";
 

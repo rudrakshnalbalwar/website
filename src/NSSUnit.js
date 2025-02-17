@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from "react-router-dom";
 import "./NSSUnit.css";
 import NSSFooter from "./NSSFooter.js";
-import UniversityLogo from "./UniversityLogo.png";
+import UniversityLogo from "./download.jpg";
 import NSSLogo from "./Images/download.jpg";
 import Volunteers from "./Images/Volunteers.png";
 import HC from "./Images/HC.png";
