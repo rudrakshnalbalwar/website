@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from "react
 import "./NSSUnit.css";
 import NSSFooter from "./NSSFooter.js";
 import UniversityLogo from "./UniversityLogo.png";
-import NSSLogo from "./image.png";
+import NSSLogo from "./Images/download.jpg";
 import Volunteers from "./Images/Volunteers.png";
 import HC from "./Images/HC.png";
 import NEWS from "./Images/NEWS.png";
@@ -120,7 +120,7 @@ const NSSUnit = () => {
             
             <div className="reach-content">
             <img src={Volunteers} alt="Volunteers" className="reach-icon" />
-              <span className="reach-number">10,000+</span>
+              <span className="reach-number">200+</span>
             </div>
             <span className="reach-label">Volunteers</span>
           </div>
@@ -128,7 +128,7 @@ const NSSUnit = () => {
           <div className="reach-item">
             <div className="reach-content">
             <img src={HC} alt="Happy Children" className="reach-icon" />
-              <span className="reach-number">50,000+</span>
+              <span className="reach-number">2,000+</span>
             </div>
             <span className="reach-label">Happy Children</span>
           </div>
@@ -137,7 +137,7 @@ const NSSUnit = () => {
           <div className="reach-item">
             <div className="reach-content">
             <img src={NEWS} alt="News Features" className="reach-icon" />
-              <span className="reach-number">50+</span>
+              <span className="reach-number">5+</span>
             </div>
             <span className="reach-label">News Features</span>
           </div>
@@ -154,7 +154,7 @@ const NSSUnit = () => {
           <div className="reach-item">
             <div className="reach-content">
             <img src={Insta} alt="Instagram Followers" className="reach-icon" />
-              <span className="reach-number">30,000+</span>
+              <span className="reach-number">2,500+</span>
             </div>
             <span className="reach-label">Instagram Followers</span>
           </div>
