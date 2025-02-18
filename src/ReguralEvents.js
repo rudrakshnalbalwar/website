@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './Event.css';
 import Navbar from "./Navbar.js";
 import NSSFooter from "./NSSFooter.js";
+import {Link} from "react-router-dom";
 
 const events = [
   {
@@ -106,6 +107,9 @@ function RegularEvents() {
             <h3 className="event-name">{event.name}</h3>
             <p className="event-description">{event.description1}</p>
             <p className="event-description">{event.description2}</p>
+            <Link to={`/event-report/${event.name}`} className="event-report-btn">
+                  Event Report
+                </Link>
           </div>
         </div>        
         ))}

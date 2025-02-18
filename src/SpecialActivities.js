@@ -76,6 +76,7 @@ function SpecialActivities() {
             <h3 className="event-name">{event.name}</h3>
             <p className="event-description">{event.description1}</p>
             <p className="event-description">{event.description2}</p>
+            <button className="event-report-btn">Event Report</button>
           </div>
         </div>        
         ))}
