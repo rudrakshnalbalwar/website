@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import Navbar from "./Navbar.js";
+import NSSFooter from "./NSSFooter.js";
 
 function EventReport() {
   const { eventName } = useParams();
@@ -15,6 +17,7 @@ function EventReport() {
 
   return (
     <div>
+        <Navbar />
       <h1>Event Report for: {eventName}</h1>
       
       {/* Year Selector */}
@@ -36,6 +39,7 @@ function EventReport() {
         <p>This is the event report for {eventName} in {selectedYear}.</p>
         {/* You can dynamically load the report from a backend, display a PDF, or show specific data for the year */}
       </div>
+      <NSSFooter />
     </div>
   );
 }

@@ -168,7 +168,11 @@ html, body {
 /* Sections Styling */
 .nss-vision, 
 .nss-who-we-are, 
-.nss-what-we-do,
+.nss-what-we-do {
+  padding: 20px;
+  max-width: 50rem;
+}
+
 .nss-reach,
 .nss-domains {
   padding: 20px;

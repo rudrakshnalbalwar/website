@@ -54,7 +54,9 @@ const NSSUnit = () => {
       {/* Navbar */}
       <header className="nss-header">
         <div className="nss-header-left">
+        <Link to="/">
           <img src={UniversityLogo} alt="University Logo" className="nss-logo" />
+        </Link>
           <h1 className="nss-title">RAMDEOBABA UNIVERSITY</h1>
         </div>
 
@@ -143,35 +145,26 @@ const NSSUnit = () => {
         </div>
 
       {/* Domains Section */}
-      <div className="nss-domains">
-        <h2 className="nss-domains-title">DOMAINS</h2>
-        <div className="nss-domains-icons">
-          <div className="domain-item">
-            <img src={Education} alt="Education" className="domain-icon" />
-            <p>EDUCATION</p>
-          </div>
-          <div className="domain-item">
-            <img src={Health} alt="Health" className="domain-icon" />
-            <p>HEALTH</p>
-          </div>
-          <div className="domain-item">
-            <img src={Innovation} alt="Innovation" className="domain-icon" />
-            <p>INNOVATION</p>
-          </div>
-          <div className="domain-item">
-            <img src={Society} alt="Society" className="domain-icon" />
-            <p>SOCIETY</p>
-          </div>
-          <div className="domain-item">
-            <img src={Environment} alt="Environment" className="domain-icon" />
-            <p>ENVIRONMENT</p>
-          </div>
-          <div className="domain-item">
-            <img src={Rural} alt="Environment" className="domain-icon" />
-            <p>RURAL</p>
-          </div>
+<div className="nss-domains">
+  <h2 className="nss-domains-title">DOMAINS</h2>
+  <div className="nss-domains-icons">
+    {[ 
+      { img: Education, label: "Education" },
+      { img: Health, label: "Health" },
+      { img: Innovation, label: "Innovation" },
+      { img: Society, label: "Society" },
+      { img: Environment, label: "Environment" },
+      { img: Rural, label: "Rural" }
+    ].map((item, index) => (
+      <div key={index} className="domain-item" onClick={() => handleNavigate(item.label)} style={{ cursor: "pointer" }}>
+        <div className="domain-content">
+          <img src={item.img} alt={item.label} className="domain-icon" />
         </div>
+        <p className="domain-label">{item.label}</p>
       </div>
+    ))}
+  </div>
+</div>
 
       {/* Footer Section */}
       <NSSFooter />
