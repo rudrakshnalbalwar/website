@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* ✅ Always 3 equal sections */
     width: 100%;
-    background: black;
+    background: #1A1A1A; /* Charcoal Black */
     color: white;
     text-align: center;
 }
@@ -22,22 +22,23 @@
 
 /* Shared Background Colors */
 .footer-section:first-child {
-    background: #333;
+    background: #222; /* Slightly lighter black for contrast */
 }
 
 .footer-section:nth-child(2) {
-    background: #ffffff;
-    border: 4px solid #000000;
-    color: black;
+    background: #222;
+    border-left: 2px solid #FFD700; /* Gold border */
+    border-right: 2px solid #FFD700;
+    color: white;
 }
 
 .footer-section:last-child {
-    background: #333;
+    background: #222;
 }
 
 /* Headings */
 .footer-section h3 {
-    border-bottom: 2px solid #ffae00;
+    border-bottom: 2px solid #FFD700; /* Gold */
     font-size: 1rem;
     margin-bottom: 10px;
     width: 50%;
@@ -59,9 +60,11 @@
 .footer-section ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
+    color: #FFC107; /* Lighter Gold on hover */
     text-decoration: underline;
 }
 
@@ -74,8 +77,8 @@
 }
 
 .social-icons img {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s ease;
 }
 
@@ -88,6 +91,15 @@
 .footer-section a {
     font-size: 0.85rem;
     margin: 3px 0;
+}
+
+.mail {
+    color: #FFD700; /* Gold */
+    transition: color 0.3s ease;
+}
+
+.mail:hover {
+    color: #FFC107; /* Lighter Gold */
 }
 
 /* ✅ Ensuring Full-Width & Single Row on All Screens */

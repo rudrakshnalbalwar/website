@@ -191,7 +191,7 @@
 /* Our Reach Section */
 .nss-reach {
   background: none;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./Images/stats.JPG ');
+  background: linear-gradient(rgba(63, 61, 61, 0.5), rgba(0,0,0,0.5)), url('./Images/stats.JPG ');
   background-size: cover;
   background-position: center;
   color: white;
@@ -202,7 +202,7 @@
 
 .nss-reach-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;

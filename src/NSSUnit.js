@@ -10,6 +10,7 @@ import NEWS from "./Images/NEWS.png";
 import Followers from "./Images/Followers.png";
 import SE from "./Images/SE.png";
 import Insta from "./Images/Insta.png";
+import Achievements from "./Images/achievement.png";
 import Education from "./Images/Education.png";
 import Health from "./Images/Health.png";
 import Innovation from "./Images/Innovation.png";
@@ -157,6 +158,14 @@ const NSSUnit = () => {
               <span className="reach-number">2,500+</span>
             </div>
             <span className="reach-label">Instagram Followers</span>
+          </div>
+
+          <div className="reach-item">
+            <div className="reach-content">
+            <img src={Achievements} alt="Achievements" className="reach-icon" />
+              <span className="reach-number">10+</span>
+            </div>
+            <span className="reach-label">Acheivements</span>
           </div>
         </div>
       </div>
