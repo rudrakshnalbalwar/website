@@ -1,9 +1,9 @@
 /* Footer Container */
 .nss-footer {
+    padding-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* ✅ Always 3 equal sections */
     width: 100%;
-    background: #1A1A1A; /* Charcoal Black */
     color: white;
     text-align: center;
 }

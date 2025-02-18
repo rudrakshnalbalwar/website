@@ -1,4 +1,8 @@
 /* Main container */
+html, body {
+  scrollbar-width: none;
+}
+
 .nss-container {
   font-family: Arial, sans-serif;
   color: white;
