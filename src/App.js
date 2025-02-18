@@ -9,6 +9,7 @@ import EventPage from "./EventPage.js";
 import Events from "./Event.js";
 import Teampage from "./Teampage.js";
 import PrernaRegistration from './PrernaRegistration.js';
+import ReachReport from './ReachReport.js';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/team" element={<Teampage />} />
         <Route path="/events" element={<Events />} />
         <Route path="/full-gallery/:year/:eventName" element={<EventPage />} />
+        <Route path="/:labelreport" element={<ReachReport />} />
+        <Route path="/:labelreport/:year" />
         <Route path="/prerna-registration" element={<PrernaRegistration />} />
       </Routes>
     </Router>

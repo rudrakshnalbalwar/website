@@ -1,11 +1,13 @@
 import React from "react";
+import {useState} from "react";
 import "./Teampage.css";
 import Instagram from './Images/Instagram.png'; // Custom Instagram icon
 import LinkedIn from './Images/Linkedin.png';
 import Navbar from "./Navbar.js";
 import NSSFooter from "./NSSFooter.js";
 
-const teamMembers = [
+const teamMembers = {
+  2024: [
   { id: "incharge", name: "Dr. Amit Anurag", role: "Program Incharge", image: "https://www.rknec.edu/wp-content/uploads/2023/10/Prof.Anurag-Thakur.png" },
 
   { id: "secretary-1", name: "Yash Ghoderao", role: "Secretary", image: "https://image.nssiitd.in/current_team/Parth_Soni_Gsecy.jpg",instagram: "https://www.instagram.com/ghoderao_yash?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
@@ -84,33 +86,75 @@ const teamMembers = [
     linkedin: "" },
   { id: "creathead", name: "Sumedh Khangan", role: "Creative Head", image: "https://image.nssiitd.in/current_team/Parth_Soni_Gsecy.jpg" ,instagram: "https://www.instagram.com/sumedh_khangan/?utm_source=ig_web_button_share_sheet",
     linkedin: "https://www.linkedin.com/in/sumedh-khangan/"},
-];
+],
+
+2023:
+[
+  { id: "incharge", name: "Dr. Amit Anurag", role: "Program Incharge", image: "https://www.rknec.edu/wp-content/uploads/2023/10/Prof.Anurag-Thakur.png" },
+]
+};
+
 
 const Teampage = () => {
+  const [selectedYear, setSelectedYear] = useState(2024); // Track the selected year
+
+  const handleYearChange = (event) => {
+    setSelectedYear(Number(event.target.value)); // Update the selected year
+  };
+
+  const getVolunteersPdfPath = () => {
+    if (selectedYear === 2024) {
+      return "/volunteers-2024-25.pdf";  // Example for 2024-25
+    } else if (selectedYear === 2023) {
+      return "/volunteers-2023-24.pdf";  // Example for 2023-24
+    }
+    return ""; // Default case if year is unknown
+  };
+
   return (
     <div>
       <Navbar />
       <div className="team-container-heading">
         <h1>Welcome To The NSS Core Team</h1>
       </div>
+      
+      {/* Year Selector */}
+      <div className="year-selector">
+        <label>Select Year: </label>
+        <select value={selectedYear} onChange={handleYearChange}>
+          <option value={2024}>2024-25</option>
+          <option value={2023}>2023-23</option>
+          {/* Add other options here for different years */}
+        </select>
+      </div>
+
       <div className="team-container">
         <div className="team-grid">
-          {teamMembers.map((member) => (
+          {teamMembers[selectedYear].map((member) => (
             <div className={`team-card ${member.id}`} key={member.id}>
               <img src={member.image} alt={member.name} className="profile-image" />
               <h3>{member.name}</h3>
               <p>{member.role}</p>
               <div className="social-icons">
-                <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-                  <img src={Instagram} className="social-icon insta" />
-                </a>
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                  <img src={LinkedIn} className="social-icon linkedin" />
-                </a>
+                {member.instagram && (
+                  <a href={member.instagram} target="_blank" rel="noopener noreferrer">
+                    <img src={Instagram} className="social-icon insta" alt="Instagram" />
+                  </a>
+                )}
+                {member.linkedin && (
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                    <img src={LinkedIn} className="social-icon linkedin" alt="LinkedIn" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
+        <div className="full-volunteers-button">
+        <a href={getVolunteersPdfPath()} target="_blank" rel="noopener noreferrer">
+          <button>Full Volunteers List (PDF)</button>
+        </a>
+      </div>
       </div>
       <NSSFooter />
     </div>

@@ -39,6 +39,16 @@ const NSSUnit = () => {
     };
   }, []);
 
+  const handleNavigate = (label) => {
+    if (label === "Instagram Followers") {
+      // Redirect to Instagram page in a new tab
+      window.open("https://www.instagram.com/yourusername", "_blank");
+    } else {
+    const formattedLabel = label.toLowerCase().replace(/\s+/g, "");
+    navigate(`/${formattedLabel}report`);
+    }
+  };
+
   return (
     <div className="nss-container">
       {/* Navbar */}
@@ -112,63 +122,25 @@ const NSSUnit = () => {
       </div>
       </div>
 
-      {/* Our Reach Section */}
       <div className="nss-reach">
         <h2 className="nss-reach-title">OUR REACH</h2>
         <div className="nss-reach-icons">
-          {/* First Row */}
-          <div className="reach-item">
-            
-            <div className="reach-content">
-            <img src={Volunteers} alt="Volunteers" className="reach-icon" />
-              <span className="reach-number">200+</span>
+          {[{img: Volunteers, label: "Volunteers", number: "200+"},
+            {img: HC, label: "Happy Children", number: "2,000+"},
+            {img: NEWS, label: "News Features", number: "5+"},
+            {img: SE, label: "Students Engaged", number: "5,000+"},
+            {img: Insta, label: "Instagram Followers", number: "2,500+"},
+            {img: Achievements, label: "Achievements", number: "10+"}].map((item, index) => (
+            <div key={index} className="reach-item" onClick={() => handleNavigate(item.label)} style={{ cursor: "pointer" }}>
+              <div className="reach-content">
+                <img src={item.img} alt={item.label} className="reach-icon" />
+                <span className="reach-number">{item.number}</span>
+              </div>
+              <span className="reach-label">{item.label}</span>
             </div>
-            <span className="reach-label">Volunteers</span>
-          </div>
-
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={HC} alt="Happy Children" className="reach-icon" />
-              <span className="reach-number">2,000+</span>
-            </div>
-            <span className="reach-label">Happy Children</span>
-          </div>
-
-          {/* Second Row */}
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={NEWS} alt="News Features" className="reach-icon" />
-              <span className="reach-number">5+</span>
-            </div>
-            <span className="reach-label">News Features</span>
-          </div>
-
-          {/* Third Row */}
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={SE} alt="Student Engagement" className="reach-icon" />
-              <span className="reach-number">5,000+</span>
-            </div>
-            <span className="reach-label">Students Engaged</span>
-          </div>
-
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={Insta} alt="Instagram Followers" className="reach-icon" />
-              <span className="reach-number">2,500+</span>
-            </div>
-            <span className="reach-label">Instagram Followers</span>
-          </div>
-
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={Achievements} alt="Achievements" className="reach-icon" />
-              <span className="reach-number">10+</span>
-            </div>
-            <span className="reach-label">Acheivements</span>
-          </div>
+          ))}
         </div>
-      </div>
+        </div>
 
       {/* Domains Section */}
       <div className="nss-domains">
