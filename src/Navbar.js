@@ -25,7 +25,9 @@ return(
       {/* Navbar */}
       <header className="nss-header">
         <div className="nss-header-left">
-          <img src={UniversityLogo} alt="University Logo" className="nss-logo" />
+          <Link to="/">
+            <img src={UniversityLogo} alt="University Logo" className="nss-logo" />
+          </Link>
           <h1 className="nss-title">RAMDEOBABA UNIVERSITY</h1>
         </div>
 

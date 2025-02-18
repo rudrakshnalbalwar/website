@@ -75,6 +75,33 @@
   flex-direction: row-reverse;
 }
 
+/* Styling for the Event Report button */
+.event-report-btn {
+  padding: 10px 20px;
+  background-color: #ffae00; /* Button color */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration: none; /* Remove underline for links */
+  display: inline-block; /* Ensure the button behaves like a block element */
+  text-align: center; /* Center the text inside the button */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.event-report-btn:hover {
+  background-color: #e59400;  /* Darker button color on hover */
+  transform: scale(1.05);  /* Slightly grow button on hover */
+}
+
+.event-report-btn:active {
+  background-color: #d48100;  /* Darkest button color on click */
+  transform: scale(1);  /* Maintain size on click */
+}
+
 @media (max-width: 768px) {
   /* The parent container that holds both the gallery and description */
   .event-box {
