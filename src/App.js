@@ -13,6 +13,7 @@ import ReachReport from './ReachReport.js';
 import ReguralEvents from './ReguralEvents.js';
 import SpecialActivities from './SpecialActivities.js';
 import EventReport from './EventReport.js';
+import AnnualReport from './AnnualReport.js';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/events/reguralevents" element={<ReguralEvents />} />
         <Route path="/events/specialevents" element={<SpecialActivities />} />
+        <Route path="/events/annualreport" element={<AnnualReport />} />
         <Route path="/event-report/:eventName" element={<EventReport />} />
         <Route path="/full-gallery/:year/:eventName" element={<EventPage />} />
         <Route path="/:labelreport" element={<ReachReport />} />

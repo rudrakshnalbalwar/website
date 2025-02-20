@@ -42,9 +42,9 @@ function ReachReport() {
                     <h1>🎉 Welcome to the {labelreport.replace('report', '').toUpperCase()} Report Section 🎉</h1>
                     <p>Select the year to view the report:</p>
                     <select value={selectedYear} onChange={handleYearChange}>
-                        <option value="">-- Select Year --</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
+                        <option value="">-- Select Session --</option>
+                        <option value="2023">2023-24</option>
+                        <option value="2024">2024-25</option>
                     </select>
                     <div className="buttonReport">
                         <button onClick={navigateToYearReport} disabled={!selectedYear}>View Report</button>
