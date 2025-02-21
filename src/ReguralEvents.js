@@ -41,9 +41,9 @@ const events = [
   {
     name: 'AARAMBH FOUNDATION WEEK',
     images: [
-      "https://media.istockphoto.com/id/1497811046/photo/a-doctor-and-her-assistant-doctor-engaged-in-a-conversation-with-family-members-of-a-village.jpg?s=612x612&w=0&k=20&c=tlxfJh1vYnm5PrnHvID4vdxnrqXmjpiinIxhgM5UrSY=",
-      "https://media.istockphoto.com/id/1125843699/photo/real-estate-agent-with-group-of-villagers.jpg?s=612x612&w=0&k=20&c=E0EpqKdr4v59EMB1hfevF1QcwELQk0dvekJyLfIrpq0=",
-      "https://media.istockphoto.com/id/1318617341/photo/low-angle-view-group-of-volunteers-busy-working-by-arranging-vegetables-and-clothes-on.jpg?s=612x612&w=0&k=20&c=CJsDJ1nIMKr5NPBQufc5eyjsbSV_3XhqgcQusavGXIk=",
+      "/Aaramb/IMG_1591.jpg",
+      "/Aaramb/IMG_1672.jpg",
+      "/Aaramb/IMG_2911.jpg",
     ],
     description1: 'A week-long celebration of the foundation of NSS, featuring various activities and workshops.',
     description2: 'This event emphasizes the mission and vision of social service and community engagement.',
@@ -71,9 +71,9 @@ const events = [
   {
     name: 'CLEANLINESS DRIVE',
     images: [
-      "https://media.istockphoto.com/id/1497811046/photo/a-doctor-and-her-assistant-doctor-engaged-in-a-conversation-with-family-members-of-a-village.jpg?s=612x612&w=0&k=20&c=tlxfJh1vYnm5PrnHvID4vdxnrqXmjpiinIxhgM5UrSY=",
-      "https://media.istockphoto.com/id/1125843699/photo/real-estate-agent-with-group-of-villagers.jpg?s=612x612&w=0&k=20&c=E0EpqKdr4v59EMB1hfevF1QcwELQk0dvekJyLfIrpq0=",
-      "https://media.istockphoto.com/id/1318617341/photo/low-angle-view-group-of-volunteers-busy-working-by-arranging-vegetables-and-clothes-on.jpg?s=612x612&w=0&k=20&c=CJsDJ1nIMKr5NPBQufc5eyjsbSV_3XhqgcQusavGXIk=",
+      "/Clean/IMG_20241002_094126.jpg",
+      "/Clean/IMG_20241002_095147.jpg",
+      "/Clean/IMG_20241002_115904.jpg",
     ],
     description1: 'A campaign to promote hygiene, waste management, and environmental sustainability.',
     description2: 'Volunteers clean public places and educate people about keeping surroundings clean.',
@@ -81,9 +81,9 @@ const events = [
   {
     name: 'BLOOD DONATION CAMP',
     images: [
-      "https://media.istockphoto.com/id/1497811046/photo/a-doctor-and-her-assistant-doctor-engaged-in-a-conversation-with-family-members-of-a-village.jpg?s=612x612&w=0&k=20&c=tlxfJh1vYnm5PrnHvID4vdxnrqXmjpiinIxhgM5UrSY=",
-      "https://media.istockphoto.com/id/1125843699/photo/real-estate-agent-with-group-of-villagers.jpg?s=612x612&w=0&k=20&c=E0EpqKdr4v59EMB1hfevF1QcwELQk0dvekJyLfIrpq0=",
-      "https://media.istockphoto.com/id/1318617341/photo/low-angle-view-group-of-volunteers-busy-working-by-arranging-vegetables-and-clothes-on.jpg?s=612x612&w=0&k=20&c=CJsDJ1nIMKr5NPBQufc5eyjsbSV_3XhqgcQusavGXIk=",
+      "/images/BloodDonation/DSC04275.JPG",
+      "/images/BloodDonation/DSC04258.JPG",
+      "/images/BloodDonation/IMG20240925123658.jpg",
     ],
     description1: 'A life-saving event encouraging individuals to donate blood and help those in need.',
     description2: 'Medical professionals guide donors and ensure safe and effective blood collection.',
@@ -115,7 +115,12 @@ function EventSlider({ images }) {
     <Slider {...settings} className="event-slider">
       {images.map((img, idx) => (
         <div key={idx}>
-          <img src={img} alt="event slide" className="event-slide-image" />
+          <img
+  src={img}
+  alt="event slide"
+  className="event-slide-image"
+  style={{ width: "100%", height: "300px", objectFit: "cover" }}
+/>
         </div>
       ))}
     </Slider>

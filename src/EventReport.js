@@ -5,14 +5,14 @@ import NSSFooter from "./NSSFooter.js";
 
 function EventReport() {
   const { eventName } = useParams();
-  const [selectedYear, setSelectedYear] = useState("2025"); // Default to 2025 or the current year
+  const [selectedYear, setSelectedYear] = useState("2025-26"); // Default to 2025 or the current year
 
   // Data structure containing event-specific reports for different years
   const reports = {
     "NATIONAL FOUNDATION DAY": {
       "2023-24": {
         type: "pdf",
-        url: "./src/PDFs/NSS-Foundation-Day-2023-Reort1.pdf"
+        url: "/PDFs/NSS-Foundation-Day-2023-Reort1.pdf"
       },
       "2024-25": {
         type: "text",
@@ -63,11 +63,6 @@ function EventReport() {
                   height="600px" 
                   title={`${eventName} Report PDF`}
                 />
-                <p>
-                  <a href={report.url} target="_blank" rel="noopener noreferrer">
-                    Click here to download the PDF
-                  </a>
-                </p>
               </div>
             ) : (
               <p>{report.content}</p>

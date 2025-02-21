@@ -14,6 +14,7 @@ import ReguralEvents from './ReguralEvents.js';
 import SpecialActivities from './SpecialActivities.js';
 import EventReport from './EventReport.js';
 import AnnualReport from './AnnualReport.js';
+import DomainReport from './DomainReport.js';
 
 function App() {
   return (
@@ -28,8 +29,10 @@ function App() {
         <Route path="/events/annualreport" element={<AnnualReport />} />
         <Route path="/event-report/:eventName" element={<EventReport />} />
         <Route path="/full-gallery/:year/:eventName" element={<EventPage />} />
-        <Route path="/:labelreport" element={<ReachReport />} />
-        <Route path="/:labelreport/:year" />
+        <Route path="/reach/:labelreport" element={<ReachReport />} />
+        <Route path="/reach/:labelreport/:year" />
+        <Route path="/domain/:labelreport" element={<DomainReport />} />
+        <Route path="/domain/:labelreport/:year" />
         <Route path="/prerna-registration" element={<PrernaRegistration />} />
       </Routes>
     </Router>
