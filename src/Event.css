@@ -1,98 +1,173 @@
-/* General styles */
-body {
-    background-color: white;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Container for events */
-  .events-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: white;
-  }
-  
-  /* Events section title */
-  .events-title {
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .events-title::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: magenta;
-    margin: 5px auto;
-  }
-  
-  /* Grid layout for desktop */
-  .events-grid {
-    position: relative;
+/* CSS Styles */
+.events-container {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.events-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.event-box {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+  background: #666;
+  border-radius: 1rem;
+  box-shadow: 0 0 3rem #666;
+  transition: transform 0.3s ease-in-out;
+}
+
+.event-box:hover {
+  transform: scale(1.02);
+}
+
+.event-slider {
+  width: 50%;
+}
+
+.event-slide-image {
+  width: 90%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.event-details {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  color: #ddd;
+}
+
+.event-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffae00;
+}
+
+.event-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.event-box.left {
+  flex-direction: row;
+}
+
+.event-box.right {
+  flex-direction: row-reverse;
+}
+
+/* Styling for the Event Report button */
+.event-report-btn {
+  padding: 10px 20px;
+  background-color: #ffae00; /* Button color */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration: none; /* Remove underline for links */
+  display: inline-block; /* Ensure the button behaves like a block element */
+  text-align: center; /* Center the text inside the button */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.event-report-btn:hover {
+  background-color: #e59400;  /* Darker button color on hover */
+  transform: scale(1.05);  /* Slightly grow button on hover */
+}
+
+.event-report-btn:active {
+  background-color: #d48100;  /* Darkest button color on click */
+  transform: scale(1);  /* Maintain size on click */
+}
+
+@media (max-width: 768px) {
+  /* The parent container that holds both the gallery and description */
+  .event-box {
+    /* Use grid to create a vertical stack layout */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 5rem;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
+    /* Create two rows: one for gallery, one for description */
+    grid-template-rows: auto auto;
+    /* Add some space between the gallery and description */
+    gap: 20px;
+    /* Ensure the container takes full width */
     width: 100%;
-    gap: 8rem;
-    max-width: 900px;
-    width: 100%;
-    justify-content: center;
-    z-index: 1;
+    /* Prevent any overflow issues */
     overflow: hidden;
+    /* Ensure padding is included in width calculations */
+    box-sizing: border-box;
   }
-  
-  /* Event card styling */
-  .event-card {
-    position: relative;
-    border-radius: 15px;
+
+  /* The image gallery/slider section */
+  .event-slider {
+    /* Place in the first row */
+    grid-row: 1;
+    /* Take up full width of parent */
+    width: 100%;
+    /* Prevent content from overflowing */
     overflow: hidden;
-    width: 100%;
-    max-width: 250px;
-    height: 180px;
+    /* Maintain aspect ratio if needed */
+    aspect-ratio: 16/9;
   }
-  
-  .event-image {
+
+  /* The container for the description section */
+  .event-details {
+    /* Place in the second row */
+    grid-row: 2;
+    /* Take up full width of parent */
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-  }
-  
-  .event-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  .event-name {
+    /* Add some padding around the content */
+    padding: 15px;
     color: white;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 10px;
+    /* Ensure padding doesn't affect width */
+    box-sizing: border-box;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .events-grid {
-      grid-template-columns: 1fr;
-      justify-content: center;
-      gap: 3rem;
-    }
-  
-    .event-card {
-      max-width: 100%;
-    }
+
+  /* The actual description text */
+  .event-description {
+    /* Set comfortable reading size */
+    font-size: 14px;
+    line-height: 1.6;
+    /* Ensure text wraps properly */
+    word-wrap: break-word;
+    /* Prevent text from overflowing */
+    max-width: 100%;
   }
-  
+}
+
+.event-slider .slick-prev,
+.event-slider .slick-next {
+    /* Position arrows on top of the images */
+    z-index: 1;
+}
+
+.event-slider .slick-prev {
+    /* Move the left arrow onto the image */
+    left: 20px;
+}
+
+.event-slider .slick-next {
+    right: 20px;
+}

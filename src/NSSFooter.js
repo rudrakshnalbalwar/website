@@ -1,7 +1,8 @@
 import React from "react";
 import "./NSSFooter.css";
-import Instagram from "./Images/Instagram.png";
-import Linkedin from "./Images/Linkedin.png";
+import Instagram from "./Instagram.png";
+import Linkedin from "./LinkedIn.png";
+import { Link } from "react-router-dom";  // Import Link at the top
 
 const Footer = () => {
   return (
@@ -11,11 +12,12 @@ const Footer = () => {
         <h3>Quick Links</h3>
         <ul>
         <li><a href="https://rbunagpur.in/" target="_blank">RBU Website</a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Sports</a></li>
+<li><Link to="/">Home</Link></li>
+<li><Link to="/team">Team</Link></li>
+<li><Link to="/events">Events</Link></li>
+<li><Link to="/gallery">Gallery</Link></li>
+{/* <li><a href="https://rbunagpur.in/sports" target="_blank" rel="noopener noreferrer">Sports</a></li>  */}
+
         </ul>
       </div>
 
@@ -35,7 +37,7 @@ const Footer = () => {
       {/* Contact Section */}
       <div className="footer-section">
         <h3>Contact Us</h3>
-        <p>Email: <br></br><a href="mailto:nss@ramdeobaba.edu">nss@ramdeobaba.edu</a></p>
+        <p>Email: <br></br><a href="mailto:nss@ramdeobaba.edu" className="mail">nss@rknec.edu</a></p>
         <p>Ph: +91 9876543210</p>
         <p>Address: Ramdeobaba University, Nagpur</p>
       </div>

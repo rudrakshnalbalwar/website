@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from "react-router-dom";
 import "./NSSUnit.css";
 import NSSFooter from "./NSSFooter.js";
-import UniversityLogo from "./UniversityLogo.png";
-import NSSLogo from "./image.png";
+import UniversityLogo from "./download.jpg";
+import NSSLogo from "./Images/download.jpg";
 import Volunteers from "./Images/Volunteers.png";
 import HC from "./Images/HC.png";
 import NEWS from "./Images/NEWS.png";
 import Followers from "./Images/Followers.png";
 import SE from "./Images/SE.png";
 import Insta from "./Images/Insta.png";
+import Achievements from "./Images/achievement.png";
 import Education from "./Images/Education.png";
 import Health from "./Images/Health.png";
 import Innovation from "./Images/Innovation.png";
@@ -17,9 +18,11 @@ import Society from "./Images/Society.png";
 import Environment from "./Images/Environment.png";
 import Rural from "./Images/Rural.png";
 import Gallery from "./Gallery.js";
+import PrernaRegistration from "./PrernaRegistration.js";
 
 const NSSUnit = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -36,12 +39,29 @@ const NSSUnit = () => {
     };
   }, []);
 
+  const handleNavigate = (label) => {
+    if (label === "Instagram Followers") {
+      // Redirect to Instagram page in a new tab
+      window.open("https://www.instagram.com/yourusername", "_blank");
+    } else {
+    const formattedLabel = label.toLowerCase().replace(/\s+/g, "");
+    navigate(`/reach/${formattedLabel}report`);
+    }
+  };
+
+  const handleNavigate2 = (label) => {
+    const formattedLabel = label.toLowerCase().replace(/\s+/g, "");
+    navigate(`/domain/${formattedLabel}report`);
+  };
+
   return (
     <div className="nss-container">
       {/* Navbar */}
       <header className="nss-header">
         <div className="nss-header-left">
+        <Link to="/">
           <img src={UniversityLogo} alt="University Logo" className="nss-logo" />
+        </Link>
           <h1 className="nss-title">RAMDEOBABA UNIVERSITY</h1>
         </div>
 
@@ -69,10 +89,10 @@ const NSSUnit = () => {
           <img src={NSSLogo} alt="NSS Logo" className="nss-logo-large" />
           <div className="nss-text">
             <h2 className="nss-unit-title">NSS UNIT</h2>
-            <p className="nss-slogan">NOT ME, BUT YOU</p>
+            <p className="nss-slogan">सेवा परमः धर्मः</p>
           </div>
         </div>
-        <button className="nss-register-btn">REGISTER FOR UPCOMING EVENTS</button>
+        <button className="nss-register-btn" onClick={() => navigate("/prerna-registration")}>REGISTER FOR UPCOMING EVENTS</button>
       </div>
 
       {/* Our Vision Section */}
@@ -109,86 +129,47 @@ const NSSUnit = () => {
       </div>
       </div>
 
-      {/* Our Reach Section */}
       <div className="nss-reach">
         <h2 className="nss-reach-title">OUR REACH</h2>
         <div className="nss-reach-icons">
-          {/* First Row */}
-          <div className="reach-item">
-            
-            <div className="reach-content">
-            <img src={Volunteers} alt="Volunteers" className="reach-icon" />
-              <span className="reach-number">10,000+</span>
+          {[{img: Volunteers, label: "Volunteers", number: "200+"},
+            {img: HC, label: "Happy Children", number: "2,000+"},
+            {img: NEWS, label: "News Features", number: "5+"},
+            {img: SE, label: "Students Engaged", number: "5,000+"},
+            {img: Insta, label: "Instagram Followers", number: "2,500+"},
+            {img: Achievements, label: "Achievements", number: "10+"}].map((item, index) => (
+            <div key={index} className="reach-item" onClick={() => handleNavigate(item.label)} style={{ cursor: "pointer" }}>
+              <div className="reach-content">
+                <img src={item.img} alt={item.label} className="reach-icon" />
+                <span className="reach-number">{item.number}</span>
+              </div>
+              <span className="reach-label">{item.label}</span>
             </div>
-            <span className="reach-label">Volunteers</span>
-          </div>
-
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={HC} alt="Happy Children" className="reach-icon" />
-              <span className="reach-number">50,000+</span>
-            </div>
-            <span className="reach-label">Happy Children</span>
-          </div>
-
-          {/* Second Row */}
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={NEWS} alt="News Features" className="reach-icon" />
-              <span className="reach-number">50+</span>
-            </div>
-            <span className="reach-label">News Features</span>
-          </div>
-
-          {/* Third Row */}
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={SE} alt="Student Engagement" className="reach-icon" />
-              <span className="reach-number">5,000+</span>
-            </div>
-            <span className="reach-label">Students Engaged</span>
-          </div>
-
-          <div className="reach-item">
-            <div className="reach-content">
-            <img src={Insta} alt="Instagram Followers" className="reach-icon" />
-              <span className="reach-number">30,000+</span>
-            </div>
-            <span className="reach-label">Instagram Followers</span>
-          </div>
+          ))}
         </div>
-      </div>
+        </div>
 
       {/* Domains Section */}
-      <div className="nss-domains">
-        <h2 className="nss-domains-title">DOMAINS</h2>
-        <div className="nss-domains-icons">
-          <div className="domain-item">
-            <img src={Education} alt="Education" className="domain-icon" />
-            <p>EDUCATION</p>
-          </div>
-          <div className="domain-item">
-            <img src={Health} alt="Health" className="domain-icon" />
-            <p>HEALTH</p>
-          </div>
-          <div className="domain-item">
-            <img src={Innovation} alt="Innovation" className="domain-icon" />
-            <p>INNOVATION</p>
-          </div>
-          <div className="domain-item">
-            <img src={Society} alt="Society" className="domain-icon" />
-            <p>SOCIETY</p>
-          </div>
-          <div className="domain-item">
-            <img src={Environment} alt="Environment" className="domain-icon" />
-            <p>ENVIRONMENT</p>
-          </div>
-          <div className="domain-item">
-            <img src={Rural} alt="Environment" className="domain-icon" />
-            <p>RURAL</p>
-          </div>
+<div className="nss-domains">
+  <h2 className="nss-domains-title">DOMAINS</h2>
+  <div className="nss-domains-icons">
+    {[ 
+      { img: Education, label: "Education" },
+      { img: Health, label: "Health" },
+      { img: Innovation, label: "Innovation" },
+      { img: Society, label: "Society" },
+      { img: Environment, label: "Environment" },
+      { img: Rural, label: "Rural" }
+    ].map((item, index) => (
+      <div key={index} className="domain-item" onClick={() => handleNavigate2(item.label)} style={{ cursor: "pointer" }}>
+        <div className="domain-content">
+          <img src={item.img} alt={item.label} className="domain-icon" />
         </div>
+        <p className="domain-label">{item.label}</p>
       </div>
+    ))}
+  </div>
+</div>
 
       {/* Footer Section */}
       <NSSFooter />

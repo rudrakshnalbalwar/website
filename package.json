@@ -1,20 +1,27 @@
 {
   "name": "nss",
   "version": "0.1.0",
-  "homepage": "https://komalladdha-dev.github.io/website",
+  "homepage": "",
   "private": true,
   "dependencies": {
+    "@cloudinary/react": "^1.13.1",
+    "@cloudinary/url-gen": "^1.21.0",
     "@react-navigation/native": "^7.0.14",
     "@react-navigation/stack": "^7.1.1",
+    "cloudinary": "^2.5.1",
     "cra-template": "1.2.0",
     "ip": "^2.0.1",
     "npm": "^11.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
     "react-native": "0.72.6",
     "react-native-vector-icons": "^10.2.0",
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "slick": "^1.12.2",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
