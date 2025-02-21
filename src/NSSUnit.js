@@ -45,8 +45,13 @@ const NSSUnit = () => {
       window.open("https://www.instagram.com/yourusername", "_blank");
     } else {
     const formattedLabel = label.toLowerCase().replace(/\s+/g, "");
-    navigate(`/${formattedLabel}report`);
+    navigate(`/reach/${formattedLabel}report`);
     }
+  };
+
+  const handleNavigate2 = (label) => {
+    const formattedLabel = label.toLowerCase().replace(/\s+/g, "");
+    navigate(`/domain/${formattedLabel}report`);
   };
 
   return (
@@ -84,7 +89,7 @@ const NSSUnit = () => {
           <img src={NSSLogo} alt="NSS Logo" className="nss-logo-large" />
           <div className="nss-text">
             <h2 className="nss-unit-title">NSS UNIT</h2>
-            <p className="nss-slogan">NOT ME, BUT YOU</p>
+            <p className="nss-slogan">सेवा परमः धर्मः</p>
           </div>
         </div>
         <button className="nss-register-btn" onClick={() => navigate("/prerna-registration")}>REGISTER FOR UPCOMING EVENTS</button>
@@ -156,7 +161,7 @@ const NSSUnit = () => {
       { img: Environment, label: "Environment" },
       { img: Rural, label: "Rural" }
     ].map((item, index) => (
-      <div key={index} className="domain-item" onClick={() => handleNavigate(item.label)} style={{ cursor: "pointer" }}>
+      <div key={index} className="domain-item" onClick={() => handleNavigate2(item.label)} style={{ cursor: "pointer" }}>
         <div className="domain-content">
           <img src={item.img} alt={item.label} className="domain-icon" />
         </div>

@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /src/cloudinary.js
+/src/cloudinarypdf.js
 
 # testing
 /coverage

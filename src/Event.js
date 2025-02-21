@@ -25,7 +25,11 @@ const Event = () => {
           </Link>
 
           <Link to="/events/specialevents" className="btn-event">
-            Special Activities
+            Special Camps
+          </Link>
+
+          <Link to="/events/annualreport" className="btn-event">
+            Annual Report
           </Link>
         </div>
       </div>
